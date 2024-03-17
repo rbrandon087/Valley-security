@@ -96,29 +96,29 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
         <div className="sm:hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
-              href="#"
+              href="/homepage"
               className="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
               aria-current="page"
             >
-              Dashboard
+              Home
             </a>
             <a
-              href="#"
+              href="/Gallery"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
-              Team
+              Gallery
             </a>
             <a
-              href="#"
+              href="/About"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
-              Projects
+              About
             </a>
             <a
-              href="#"
+              href="/Contact"
               className="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
-              Calendar
+              Contact
             </a>
           </div>
         </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/Navbar.css";
 
 export interface INavbarProps {
   name: string;
@@ -51,12 +52,12 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
                 </svg>
               </button>
             </div>
-            <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div className="hidden sm:ml-6 sm:block">
-                <div className="flex space-x-4">
+            <div className="flex flex-1 items-center justify-center text-center">
+              <div className="hidden sm:ml-6 sm:block ">
+                <div className="flex space-x-4 ">
                   <a
                     href="/Homepage"
-                    className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium navbar"
                     aria-current="page"
                   >
                     Home

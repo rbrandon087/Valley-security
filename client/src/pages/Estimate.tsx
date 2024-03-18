@@ -5,7 +5,7 @@ export interface IEstimateProps {
 }
 
 const Estimate: React.FunctionComponent<IEstimateProps> = ({ name }) => {
-  return <div>Home</div>;
+  return <div>Estimate</div>;
 };
 
 export default Estimate;

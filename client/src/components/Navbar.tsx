@@ -57,26 +57,26 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
                 <div className="flex space-x-4 ">
                   <a
                     href="/Homepage"
-                    className=" text-black hover:bg-blue-700  hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className=" text-black hover:bg-bar  hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                     aria-current="page"
                   >
                     Home
                   </a>
                   <a
                     href="Gallery"
-                    className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-black hover:bg-bar hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
                     Gallery
                   </a>
                   <a
                     href="About"
-                    className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-black hover:bg-bar hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
                     About
                   </a>
                   <a
                     href="/Contact"
-                    className="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="text-black hover:bg-bar hover:text-white rounded-md px-3 py-2 text-sm font-medium"
                   >
                     Contact
                   </a>
@@ -91,26 +91,26 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
               href="/homepage"
-              className=" text-black  hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className=" text-black  hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
               aria-current="page"
             >
               Home
             </a>
             <a
               href="/Gallery"
-              className="text-black   hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-black   hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
               Gallery
             </a>
             <a
               href="/About"
-              className="text-black  hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-black  hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
               About
             </a>
             <a
               href="/Contact"
-              className="text-black  hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              className="text-black  hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
             >
               Contact
             </a>

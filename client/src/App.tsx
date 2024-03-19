@@ -18,7 +18,7 @@ const App: React.FC = () => {
         <Route path="/Homepage" element={<Homepage name={""} />} />
         <Route path="/Gallery" element={<Gallery name={""} />} />
         <Route path="/About" element={<About name={""} />} />
-        <Route path="/Contact" element={<Contact name={""} />} />
+        <Route path="/Contact" element={<Contact name={""} rows={0} />} />
         <Route path="/Careers" element={<Careers name={""} />} />
       </Routes>
     </Router>

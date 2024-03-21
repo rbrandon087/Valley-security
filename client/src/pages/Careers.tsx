@@ -7,7 +7,19 @@ export interface ICareersProps {
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   return (
-    <div className="grid h-screen place-items-center">
+    <div className="grid h-screen place-items-center mt-9">
+      <div className="relative mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
+        <img
+          src="https://thumbs.dreamstime.com/b/installation-click-laminate-flooring-61477542.jpg"
+          alt="Descriptive Alt Text"
+          className="mx-auto mt-4"
+        />
+        <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg place-items-center">
+          <h2 className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center text-3xl font-bold tracking-tight text-gray-900">
+            Join Our Team
+          </h2>
+        </div>
+      </div>
       <form>
         <div className="border-b border-gray-900/10 pb-12">
           <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">

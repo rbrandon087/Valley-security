@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import "./App.css";
 
 export interface IAppProps {}
@@ -21,6 +22,7 @@ const App: React.FC = () => {
         <Route path="/Contact" element={<Contact name={""} rows={0} />} />
         <Route path="/Careers" element={<Careers name={""} />} />
       </Routes>
+      <Footer name={""} />
     </Router>
   );
 };

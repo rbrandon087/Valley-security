@@ -1,12 +1,19 @@
-import React from "react";
-
+import React, { useState } from "react";
 import "../styles/Navbar.css";
 
 interface INavbarProps {
   name: string;
 }
 
-const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
+const Navbar: React.FC<INavbarProps> = ({ name }) => {
+  // State to manage the dropdown visibility with TypeScript
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  // Function to toggle the menu's visibility with TypeScript
+  const toggleMenu = (): void => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div>
       <nav className="">
@@ -18,6 +25,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
                 className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
+                onClick={toggleMenu}
               >
                 <span className="absolute -inset-0.5"></span>
                 <span className="sr-only">Open main menu</span>
@@ -58,34 +66,39 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
                 <div className="flex space-x-4 ">
                   <a
                     href="/Homepage"
-                    className=" text-black hover:bg-bar  hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="p-2 px-4 group font-medium text-sm"
                     aria-current="page"
                   >
                     Home
+                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                   <a
                     href="/Gallery"
-                    className="text-black hover:bg-bar hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="p-2 px-4 group font-medium text-sm"
                   >
                     Gallery
+                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                   <a
                     href="/About"
-                    className="text-black hover:bg-bar hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="p-2 px-4 group font-medium text-sm"
                   >
                     About
+                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                   <a
                     href="/Contact"
-                    className="text-black hover:bg-bar hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="p-2 px-4 group font-medium text-sm"
                   >
                     Contact
+                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                   <a
                     href="/Careers"
-                    className="text-black hover:bg-bar hover:text-white rounded-md px-3 py-2 text-sm font-medium"
+                    className="p-2 px-4 group font-medium text-sm"
                   >
                     Careers
+                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                 </div>
               </div>
@@ -94,32 +107,35 @@ const Navbar: React.FunctionComponent<INavbarProps> = ({ name }) => {
           </div>
         </div>
 
-        <div className="sm:hidden" id="mobile-menu">
+        <div
+          className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}
+          id="mobile-menu"
+        >
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
-              href="/homepage"
-              className=" text-black  hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
+              href="/Homepage"
+              className="p-2 px-4 group font-medium text-sm"
               aria-current="page"
+              onClick={toggleMenu}
             >
               Home
+              <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
-            <a
-              href="/Gallery"
-              className="text-black   hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+            <a href="/Gallery" className="p-2 px-4 group font-medium text-sm">
               Gallery
+              <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
-            <a
-              href="/About"
-              className="text-black  hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+            <a href="/About" className="p-2 px-4 group font-medium text-sm">
               About
+              <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
-            <a
-              href="/Contact"
-              className="text-black  hover:bg-bar hover:text-white block rounded-md px-3 py-2 text-base font-medium"
-            >
+            <a href="/Contact" className="p-2 px-4 group font-medium text-sm">
               Contact
+              <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+            </a>
+            <a href="/Careers" className="p-2 px-4 group font-medium text-sm">
+              Careers
+              <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
           </div>
         </div>

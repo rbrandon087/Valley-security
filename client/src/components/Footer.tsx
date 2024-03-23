@@ -28,7 +28,11 @@ const navigation = {
       href: "https://www.instagram.com/silverstateflooring?igsh=czR5cWZpMjBzdW5x",
       icon: FaInstagram,
     },
-    { name: "LinkedIn", href: "https://linkedin.com", icon: FaLinkedinIn },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/company/silver-state-flooring-llc/about/",
+      icon: FaLinkedinIn,
+    },
   ],
 };
 

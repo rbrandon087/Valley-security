@@ -4,6 +4,7 @@ import {
   FaFacebook,
   FaInstagram,
   FaLinkedinIn,
+  FaTiktok,
 } from "react-icons/fa";
 
 export interface IFooterProps {
@@ -12,9 +13,21 @@ export interface IFooterProps {
 
 const navigation = {
   social: [
-    { name: "Twitter", href: "https://twitter.com", icon: FaTwitter },
-    { name: "Facebook", href: "https://facebook.com", icon: FaFacebook },
-    { name: "Instagram", href: "https://instagram.com", icon: FaInstagram },
+    {
+      name: "TikTok",
+      href: "https://www.tiktok.com/@silverstateflooring?_t=8kvTEHKKDpS&_r=1",
+      icon: FaTiktok,
+    },
+    {
+      name: "Facebook",
+      href: "https://www.facebook.com/silverstateflooring?mibextid=ZbWKwL",
+      icon: FaFacebook,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/silverstateflooring?igsh=czR5cWZpMjBzdW5x",
+      icon: FaInstagram,
+    },
     { name: "LinkedIn", href: "https://linkedin.com", icon: FaLinkedinIn },
   ],
 };
@@ -37,7 +50,7 @@ const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
             ))}
           </div>
           <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-            &copy; 2020 Your Company, Inc. All rights reserved.
+            &copy; 2018 Silver State Flooring, Inc. All rights reserved.
           </p>
         </div>
       </footer>

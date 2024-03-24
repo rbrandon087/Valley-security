@@ -9,11 +9,11 @@ export interface ICareersProps {
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   return (
     <div className="grid h-screen place-items-center mt-9 ">
-      <div className="relative bg-cover bg-center h-52 w-full bg-opacity-50 bg-black">
+      <div className="relative bg-cover bg-center h-52 w-full bg-opacity-50">
         <img
           src={CareersImage}
           alt="Floor Installation"
-          className="bg-cover bg-center h-96 w-full bg-opacity-50 bg-black"
+          className="bg-cover bg-center h-96 w-full bg-opacity-50"
         />
         <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg place-items-center">
           <h2 className="absolute mt-24 top-0 left-0 right-0 bottom-0 flex items-center justify-center text-5xl font-bold tracking-tight text-white">

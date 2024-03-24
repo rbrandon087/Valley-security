@@ -4,13 +4,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-      'bar': '#2E4F88',
+        'bar': '#2E4F88',
+      },
+      spacing: {
+        '112': '52rem', // Add your custom margin value here
       }
-    },
+    }
   },
-  variants: [],
+  variants: {},
   plugins: [
     require('@tailwindcss/forms'),
   ],
 }
+
 

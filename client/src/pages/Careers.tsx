@@ -1,5 +1,6 @@
 import React from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
+import CareersImage from "../public/Careers.jpg";
 
 export interface ICareersProps {
   name: string;
@@ -8,11 +9,11 @@ export interface ICareersProps {
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   return (
     <div className="grid h-screen place-items-center mt-9 ">
-      <div className="relative bg-cover bg-center h-48 w-full bg-opacity-50 bg-black">
+      <div className="relative bg-cover bg-center h-52 w-full bg-opacity-50 bg-black">
         <img
-          src="https://coxandwilson.com/images/sub-banner-img.jpg"
-          alt="Descriptive Alt Text"
-          className="bg-cover bg-center h-48 w-full bg-opacity-50 bg-black"
+          src={CareersImage}
+          alt="Floor Installation"
+          className="bg-cover bg-center h-96 w-full bg-opacity-50 bg-black"
         />
         <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg place-items-center">
           <h2 className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center text-5xl font-bold tracking-tight text-white">
@@ -22,7 +23,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
       </div>
       <form>
         <div className="border-b border-gray-900/10 pb-12">
-          <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div className="mt-60 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div className="sm:col-span-3">
               <label
                 htmlFor="first-name"

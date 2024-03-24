@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Homepage from "./pages/Homepage.";
-import Gallery from "./pages/Gallery";
+import Gallery from "./components/Gallery";
 import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
@@ -18,7 +18,20 @@ const App: React.FC = () => {
       <Routes>
         <Route path="/Homepage" element={<Homepage name={""} />} />
         <Route path="/Gallery" element={<Gallery name={""} />} />
-        <Route path="/About" element={<About name={""} />} />
+        <Route
+          path="/About"
+          element={
+            <About
+              name={""}
+              person={{
+                role: undefined,
+                bio: undefined,
+                name: "",
+                imageUrl: "",
+              }}
+            />
+          }
+        />
         <Route path="/Contact" element={<Contact name={""} rows={0} />} />
         <Route path="/Careers" element={<Careers name={""} />} />
       </Routes>

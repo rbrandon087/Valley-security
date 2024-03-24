@@ -16,7 +16,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
           className="bg-cover bg-center h-96 w-full bg-opacity-50 bg-black"
         />
         <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg place-items-center">
-          <h2 className="absolute top-0 left-0 right-0 bottom-0 flex items-center justify-center text-5xl font-bold tracking-tight text-white">
+          <h2 className="absolute mt-24 top-0 left-0 right-0 bottom-0 flex items-center justify-center text-5xl font-bold tracking-tight text-white">
             Join Our Team
           </h2>
         </div>

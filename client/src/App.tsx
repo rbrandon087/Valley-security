@@ -16,7 +16,10 @@ const App: React.FC = () => {
     <Router>
       <Navbar name={""} />
       <Routes>
-        <Route path="/Homepage" element={<Homepage name={""} />} />
+        <Route
+          path="/Homepage"
+          element={<Homepage name={""} description={""} />}
+        />
         <Route path="/Gallery" element={<Gallery name={""} />} />
         <Route
           path="/About"

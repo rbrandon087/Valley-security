@@ -288,23 +288,25 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
       </div>
       <main />
       {/* Ratings Section */}
-      <div className="bg-white">
+      <div className="bg-white grid h-screen place-items-center">
         <div>
           <h2 id="reviews-heading" className="sr-only">
             Reviews
           </h2>
 
-          <div className="space-y-10">
+          <div className="space-y-4">
+            {" "}
+            {/* Adjusted space between review blocks */}
             {reviews.map((review) => (
               <div key={review.id} className="flex flex-col sm:flex-row">
-                <div className="order-2 mt-6 sm:ml-16 sm:mt-0">
+                <div className="order-2 mt-6 sm:ml-14 sm:mt-0">
                   <h3 className="text-sm font-medium text-gray-900">
                     {review.title}
                   </h3>
                   <p className="sr-only">{review.rating} out of 5 stars</p>
 
                   <div
-                    className="mt-3 space-y-6 text-sm text-gray-600"
+                    className="mt-1 space-y-2 text-sm text-gray-600"
                     dangerouslySetInnerHTML={{ __html: review.content }}
                   />
                 </div>

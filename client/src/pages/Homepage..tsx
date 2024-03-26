@@ -148,19 +148,24 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
               </p>
               <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
                 <p>
-                  Faucibus commodo massa rhoncus, volutpat. Dignissim sed eget
-                  risus enim. Mattis mauris semper sed amet vitae sed turpis id.
-                  Id dolor praesent donec est. Odio penatibus risus viverra
-                  tellus varius sit neque erat velit. Faucibus commodo massa
-                  rhoncus, volutpat. Dignissim sed eget risus enim. Mattis
-                  mauris semper sed amet vitae sed turpis id.
+                  Our team is the heartbeat of Silver State Flooring. Each
+                  member brings a unique blend of skill, passion, and dedication
+                  to the table, working tirelessly to ensure that every floor we
+                  install is a masterpiece. From our seasoned craftsmen to our
+                  visionary designers, our people are relentless in their
+                  pursuit of excellence. They are not just employees; they are
+                  artisans who take pride in creating a foundation that will
+                  stand the test of time and bring joy to your home.
                 </p>
                 <p className="mt-10">
-                  Et vitae blandit facilisi magna lacus commodo. Vitae sapien
-                  duis odio id et. Id blandit molestie auctor fermentum
-                  dignissim. Lacus diam tincidunt ac cursus in vel. Mauris
-                  varius vulputate et ultrices hac adipiscing egestas. Iaculis
-                  convallis ac tempor et ut. Ac lorem vel integer orci.
+                  We believe that our work is a reflection of our commitment to
+                  our customers. Our team’s hard work is evident in every plank
+                  laid and every finish applied, ensuring that the final product
+                  is nothing short of spectacular. Their unwavering dedication
+                  to their craft is what sets us apart and makes Silver State
+                  Flooring a leader in the industry. We celebrate the diligence
+                  and tireless efforts of our team, as they are the ones who
+                  make our mission possible.
                 </p>
               </div>
             </div>

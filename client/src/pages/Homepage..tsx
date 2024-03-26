@@ -57,15 +57,20 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
               <div className="w-full max-w-xl lg:shrink-0 xl:max-w-2xl">
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-                  We’re changing the way people connect.
+                  Floors for what matters most
                 </h1>
                 <p className="relative mt-6 text-lg leading-8 text-gray-600 sm:max-w-md lg:max-w-none">
-                  Cupidatat minim id magna ipsum sint dolor qui. Sunt sit in
-                  quis cupidatat mollit aute velit. Et labore commodo nulla
-                  aliqua proident mollit ullamco exercitation tempor. Sint
-                  aliqua anim nulla sunt mollit id pariatur in voluptate cillum.
-                  Eu voluptate tempor esse minim amet fugiat veniam occaecat
-                  aliqua.
+                  Transforming your space begins from the ground up, and nothing
+                  says ‘Welcome’ quite like a stunning, well-crafted floor. At
+                  Silver State Flooring, we believe that the foundation of every
+                  inviting home is a floor that’s not only visually appealing
+                  but also reflects the warmth and character of its inhabitants.
+                  We’re dedicated to elevating your home with flooring that’s
+                  not just pulled from the pages of a magazine, but that truly
+                  resonates with the essence of comfort and hospitality. Let us
+                  help you lay down the groundwork for countless memories and
+                  joyful moments. Welcome home, welcome to Silver State
+                  Flooring.
                 </p>
               </div>
               <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
@@ -130,10 +135,16 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
           <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
             <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
               <p className="text-xl leading-8 text-gray-600">
-                Aliquet nec orci mattis amet quisque ullamcorper neque, nibh
-                sem. At arcu, sit dui mi, nibh dui, diam eget aliquam. Quisque
-                id at vitae feugiat egestas ac. Diam nulla orci at in viverra
-                scelerisque eget. Eleifend egestas fringilla sapien.
+                At Silver State Flooring, our mission is to create spaces that
+                welcome you home. We are committed to providing high-quality
+                flooring that sets the stage for your life’s most cherished
+                moments. Our dedication to craftsmanship, aesthetic excellence,
+                and unparalleled customer service ensures that every floor we
+                lay down is a testament to our passion for making your house
+                feel like a true home. We strive to exceed expectations, one
+                floor at a time, ensuring that every step you take is grounded
+                in beauty and durability. Welcome to the Silver State Flooring
+                family, where every floor tells a story.
               </p>
               <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
                 <p>
@@ -173,8 +184,17 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
             Our values
           </h2>
           <p className="mt-6 text-lg leading-8 text-gray-600">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
+            Integrity, Craftsmanship, and Innovation are the cornerstones of
+            Silver State Flooring. We uphold Integrity in every interaction,
+            ensuring honesty and transparency guide our path. Craftsmanship is
+            our art; we bring decades of experience and attention to detail to
+            every project, guaranteeing floors that are not only beautiful but
+            also enduring. Innovation drives us forward; we embrace cutting-edge
+            techniques and materials to provide you with the best flooring
+            solutions. Above all, we value Community and Sustainability,
+            striving to make a positive impact in the homes we touch and the
+            world we share. These values are the foundation of our commitment to
+            you and to excellence.
           </p>
         </div>
       </div>

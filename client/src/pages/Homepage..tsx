@@ -54,8 +54,8 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
   }
 
   return (
-    <div>
-      <main className="isolate" />
+    <div className="mt-12 h-auto">
+      <main className="isolate " />
       {/* Hero section */}
       <div className="relative isolate -z-10">
         <svg

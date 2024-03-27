@@ -38,9 +38,9 @@ const navigation = {
 
 const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
   return (
-    <div className="flex flex-col min-h-screen mt-60">
-      <footer className="bg-white mt-auto">
-        <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
+    <div className="flex flex-col min-h-screen ">
+      <footer className="bg-white mt-auto ">
+        <div className="mx-auto max-w-7xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8 ">
           <div className="mt-10 flex justify-center space-x-10">
             {navigation.social.map((item) => (
               <a

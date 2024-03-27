@@ -9,7 +9,11 @@ module.exports = {
         'light': '#81d3ef',
       },
       spacing: {
-        '112': '52rem', // Add your custom margin value here
+        '112': '52rem',
+        '1': '4px',
+        '2': '12px',
+        '40': '160px',
+        '72': '288px',
       }
     }
   },

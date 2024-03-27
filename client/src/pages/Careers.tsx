@@ -8,7 +8,7 @@ export interface ICareersProps {
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   return (
-    <div className="grid h-screen place-items-center mt-9 ">
+    <div className="grid h-screen place-items-center mt-24 ">
       <div className="relative bg-cover bg-center h-52 w-full bg-opacity-50">
         <img
           src={CareersImage}

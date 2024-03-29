@@ -21,6 +21,13 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8" />
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div className="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
+              <div className="flex flex-shrink-0 items-center">
+                <a href="#">
+                  <img className="h-8 w-auto" src={Silver} alt="Your Company" />
+                </a>
+              </div>
+            </div>
             <button
               type="button"
               className="relative inline-flex items-center justify-center rounded-md p-2 hover:text-black focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -65,8 +72,20 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
 
           <div className="flex flex-1 items-center justify-center text-center ">
             <div className="hidden sm:ml-6 sm:block ">
+              <div className="flex md:absolute left-6">
+                <div className="flex flex-shrink- items-center">
+                  <a href="/Homepage">
+                    <img
+                      className="h-8 w-auto "
+                      src={Silver}
+                      alt="Your Company"
+                    />
+                  </a>
+                </div>
+              </div>
               <div className="flex space-x-4 ">
                 {/* Image Logo */}
+
                 <div className="flex lg:flex-1  items-center">
                   <a
                     href="/Homepage"

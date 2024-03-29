@@ -6,6 +6,9 @@ import Close from "../public/closeup.jpg";
 import Floor from "../public/floor-view.jpg";
 import Shiny from "../public/white.jpg";
 import Bedroom from "../public/window-view.jpg";
+import Hammer from "../public/Hammer.jpg";
+import Grady from "../public/Grady.jpg";
+import Demo from "../public/demo.jpg";
 
 export interface IHomepageProps {
   name: string;
@@ -293,7 +296,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
           <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
             <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Our people
+                Demolition
               </h2>
               <p className="mt-6 text-xl leading-8 text-gray-600">
                 Quasi est quaerat. Sit molestiae et. Provident ad dolorem
@@ -309,7 +312,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
             <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
               <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
                 <img
-                  src="https://images.unsplash.com/photo-1670272502246-768d249768ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&q=80"
+                  src={Grady}
                   alt=""
                   className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                 />

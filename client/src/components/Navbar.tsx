@@ -16,13 +16,13 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
 
   return (
     <div>
-      <nav className="bg-white-200 p-1  overflow-hidden fixed w-full bg-opacity-50 top-0 z-50">
+      <nav className="bg-white p-1  overflow-hidden fixed w-full bg-opacity-50 top-0 z-50 ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
               <button
                 type="button"
-                className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                className="relative inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
                 onClick={toggleMenu}

@@ -9,13 +9,13 @@ export interface ICareersProps {
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   return (
-    <div className="relative isolate bg-gray-900 mt-24">
+    <div className="relative isolate bg-white mt-24 ">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className="absolute inset-y-0 left-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
+            <div className="absolute inset-y-0 right-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
               <svg
-                className="absolute inset-0 h-full w-full stroke-gray-700 [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)]"
+                className="absolute inset-0 h-full w-full stroke-bar [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] opacity-50"
                 aria-hidden="true"
               >
                 <defs>
@@ -30,11 +30,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     <path d="M130 200V.5M.5 .5H200" fill="none" />
                   </pattern>
                 </defs>
-                <svg
-                  x="100%"
-                  y={-1}
-                  className="overflow-visible fill-gray-800/20"
-                >
+                <svg x="100%" y={-1} className="overflow-visible fill-white">
                   <path d="M-470.5 0h201v201h-201Z" strokeWidth={0} />
                 </svg>
                 <rect
@@ -49,7 +45,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 aria-hidden="true"
               >
                 <div
-                  className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br from-[#80caff] to-[#4f46e5] opacity-20"
+                  className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-br from-[#80caff] to-[#4f46e5] opacity-50"
                   style={{
                     clipPath:
                       "polygon(74.1% 56.1%, 100% 38.6%, 97.5% 73.3%, 85.5% 100%, 80.7% 98.2%, 72.5% 67.7%, 60.2% 37.8%, 52.4% 32.2%, 47.5% 41.9%, 45.2% 65.8%, 27.5% 23.5%, 0.1% 35.4%, 17.9% 0.1%, 27.6% 23.5%, 76.1% 2.6%, 74.1% 56.1%)",
@@ -57,10 +53,10 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 />
               </div>
             </div>
-            <h2 className="text-3xl font-bold tracking-tight text-white">
+            <h2 className="text-3xl font-bold tracking-tight text-black">
               Join Our Flooring Family: Where Growth Meets Passion
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
+            <p className="mt-6 text-lg leading-8 text-black">
               At Silver State Flooring, we’re more than just a workplace; we’re
               a community of dedicated professionals who share a common love for
               craftsmanship, innovation, and excellence. Our collaborative
@@ -72,7 +68,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
               positions and let’s build a beautiful future together!
             </p>
             {/*Address Info */}
-            <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
+            <dl className="mt-10 space-y-4 text-base leading-7 text-black">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
@@ -104,15 +100,12 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 <dt className="flex-none">
                   <span className="sr-only">Email</span>
                   <EnvelopeIcon
-                    className="h-7 w-6 text-gray-400"
+                    className="h-7 w-6 text-black"
                     aria-hidden="true"
                   />
                 </dt>
                 <dd>
-                  <a
-                    className="hover:text-white"
-                    href="mailto:hello@example.com"
-                  >
+                  <a className="hover:text-bar" href="mailto:hello@example.com">
                     howcanwehelp@silverstateflooring.com
                   </a>
                 </dd>
@@ -131,7 +124,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
               <div>
                 <label
                   htmlFor="first-name"
-                  className="block text-sm font-semibold leading-6 text-white"
+                  className="block text-sm font-semibold leading-6 text-black"
                 >
                   First name
                 </label>
@@ -141,14 +134,14 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     name="first-name"
                     id="first-name"
                     autoComplete="given-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
               <div>
                 <label
                   htmlFor="last-name"
-                  className="block text-sm font-semibold leading-6 text-white"
+                  className="block text-sm font-semibold leading-6 text-black"
                 >
                   Last name
                 </label>
@@ -158,14 +151,14 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     name="last-name"
                     id="last-name"
                     autoComplete="family-name"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
               <div className="sm:col-span-2">
                 <label
                   htmlFor="email"
-                  className="block text-sm font-semibold leading-6 text-white"
+                  className="block text-sm font-semibold leading-6 text-black"
                 >
                   Email
                 </label>
@@ -175,7 +168,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     name="email"
                     id="email"
                     autoComplete="email"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -197,16 +190,16 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </div>
               </div>
               {/* Resume */}
-              <div className="mt-2 flex justify-center rounded-lg border  border-white/25 px-6 py-10 sm:col-span-2">
+              <div className="mt-2 flex justify-center rounded-lg border  border-black px-6 py-10 sm:col-span-2">
                 <div className="text-center">
                   <PhotoIcon
-                    className="mx-auto h-12 w-12 text-gray-500"
+                    className="mx-auto h-12 w-12 text-black"
                     aria-hidden="true"
                   />
                   <div className="mt-4 flex text-sm leading-6 text-gray-400">
                     <label
                       htmlFor="file-upload"
-                      className="relative cursor-pointer rounded-md bg-gray-900 font-semibold text-white focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-indigo-500"
+                      className="relative cursor-pointer rounded-md bg-bar font-semibold text-white focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-60 = focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-black"
                     >
                       <span>Upload a file</span>
                       <input
@@ -216,9 +209,9 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                         className="sr-only"
                       />
                     </label>
-                    <p className="pl-1">or drag and drop</p>
+                    <p className="pl-1 text-black">or drag and drop</p>
                   </div>
-                  <p className="text-xs leading-5 text-gray-400">
+                  <p className="text-xs leading-5 text-black">
                     PNG, JPG, GIF up to 10MB
                   </p>
                 </div>
@@ -227,7 +220,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="message"
-                  className="block text-sm font-semibold leading-6 text-white"
+                  className="block text-sm font-semibold leading-6 text-"
                 >
                   Message
                 </label>
@@ -236,7 +229,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     name="message"
                     id="message"
                     rows={4}
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-grey/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                     defaultValue={""}
                   />
                 </div>
@@ -245,9 +238,9 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
             <div className="mt-8 flex justify-end">
               <button
                 type="submit"
-                className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="rounded-md bg-bar px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
               >
-                Send message
+                Submit
               </button>
             </div>
           </div>

@@ -39,14 +39,14 @@ const navigation = {
 const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
   return (
     <div className="min-h-0.5">
-      <footer className="bg-white">
-        <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8">
-          <div className="flex justify-center space-x-6 md:order-2">
+      <footer className="bg-bar px-2 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8 ">
+          <div className="flex justify-center space-x-6 md:order-2 ">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="text-gray-400 hover:text-gray-500"
+                className="text-gray-400 hover:text-gray-200"
               >
                 <span className="sr-only">{item.name}</span>
                 <item.icon className="h-6 w-6" aria-hidden="true" />
@@ -54,7 +54,7 @@ const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
             ))}
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
-            <p className="text-center text-xs leading-5 text-gray-500">
+            <p className="text-center text-xs leading-5 text-gray-200">
               &copy; 2018 BY SILVER STATE FLOORING LLC, Inc. All rights
               reserved.
             </p>

@@ -1,10 +1,6 @@
 import React from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
-import {
-  BuildingOffice2Icon,
-  EnvelopeIcon,
-  PhoneIcon,
-} from "@heroicons/react/24/outline";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import CareersImage from "../public/Careers.jpg";
 
 export interface ICareersProps {
@@ -62,27 +58,46 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
               </div>
             </div>
             <h2 className="text-3xl font-bold tracking-tight text-white">
-              Get in touch
+              Join Our Flooring Family: Where Growth Meets Passion
             </h2>
             <p className="mt-6 text-lg leading-8 text-gray-300">
-              Proin volutpat consequat porttitor cras nullam gravida at. Orci
-              molestie a eu arcu. Sed ut tincidunt integer elementum id sem.
-              Arcu sed malesuada et magna.
+              At Silver State Flooring, we’re more than just a workplace; we’re
+              a community of dedicated professionals who share a common love for
+              craftsmanship, innovation, and excellence. Our collaborative
+              culture fosters creativity, and our commitment to quality
+              craftsmanship leaves a lasting impact. Whether you’re a seasoned
+              pro or just starting out, there’s always room to learn and evolve.
+              Join us, and together, we’ll elevate the flooring industry, one
+              step at a time. Ready to make your mark? Explore our open
+              positions and let’s build a beautiful future together!
             </p>
+            {/*Address Info */}
             <dl className="mt-10 space-y-4 text-base leading-7 text-gray-300">
               <div className="flex gap-x-4">
                 <dt className="flex-none">
                   <span className="sr-only">Address</span>
-                  <BuildingOffice2Icon
-                    className="h-7 w-6 text-gray-400"
-                    aria-hidden="true"
-                  />
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                    />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"
+                    />
+                  </svg>
                 </dt>
-                <dd>
-                  545 Mavis Island
-                  <br />
-                  Chicago, IL 99191
-                </dd>
+
+                <dd>Las Vegas, NV 89134</dd>
               </div>
 
               <div className="flex gap-x-4">
@@ -98,7 +113,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     className="hover:text-white"
                     href="mailto:hello@example.com"
                   >
-                    hello@example.com
+                    howcanwehelp@silverstateflooring.com
                   </a>
                 </dd>
               </div>

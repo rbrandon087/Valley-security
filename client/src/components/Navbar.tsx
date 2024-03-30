@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
-import Silver from "../public/small-logo.jpg";
+import Silver from "../public/log.png";
 
 interface INavbarProps {
   name: string;
 }
 
 const Navbar: React.FC<INavbarProps> = ({ name }) => {
-  // State to manage the dropdown visibility with TypeScript
+  // State to manage the dropdown visibility
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  // Function to toggle the menu's visibility with TypeScript
+  // Function to toggle the menu's visibility
   const toggleMenu = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };

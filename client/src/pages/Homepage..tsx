@@ -1,7 +1,7 @@
 import React from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
-import Skyarc from "../public/Sky-arc.jpg.jpg";
-import Bath from "../public/bathroom.jpg.jpg";
+import Skyarc from "../public/Sky-arc.jpg";
+import Bath from "../public/bathroom.jpg";
 import Close from "../public/closeup.jpg";
 import Floor from "../public/floor-view.jpg";
 import Shiny from "../public/white.jpg";

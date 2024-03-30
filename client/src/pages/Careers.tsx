@@ -199,14 +199,14 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                   <div className="mt-4 flex text-sm leading-6 text-gray-400">
                     <label
                       htmlFor="file-upload"
-                      className="relative cursor-pointer rounded-md bg-bar font-semibold text-white focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-60 = focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-black"
+                      className="relative cursor-pointer rounded-md bg-transparent border font-semibold text-black focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 focus-within:ring-offset-gray-900 hover:text-bar"
                     >
                       <span>Upload a file</span>
                       <input
                         id="file-upload"
                         name="file-upload"
                         type="file"
-                        className="sr-only"
+                        className="sr-only inset-0 w-full h-full opacity-0 cursor-pointer"
                       />
                     </label>
                     <p className="pl-1 text-black">or drag and drop</p>

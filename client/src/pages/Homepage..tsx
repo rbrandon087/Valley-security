@@ -9,6 +9,7 @@ import Bedroom from "../public/window-view.jpg";
 import Hammer from "../public/Hammer.jpg";
 import Grady from "../public/Grady.jpg";
 import Demo from "../public/demo.jpg";
+import VideoPlayer from "../components/VideoPlayer";
 
 export interface IHomepageProps {
   name: string;
@@ -58,6 +59,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
 
   return (
     <div className="mt-12 h-auto min-h-screen">
+      <VideoPlayer name={""} />
       <main className="isolate " />
       {/* Hero section */}
       <div className="relative isolate -z-10">

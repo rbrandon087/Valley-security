@@ -7,7 +7,7 @@ export interface IVideoPlayerProps {
 
 const VideoPlayer: React.FunctionComponent<IVideoPlayerProps> = ({ name }) => {
   return (
-    <div className="">
+    <div className="-top-8 left-0 w-full h-full object-cover mt-8">
       <ReactPlayer
         url="https://vimeo.com/929226812?share=copy"
         playing

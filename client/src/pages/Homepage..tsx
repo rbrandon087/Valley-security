@@ -58,11 +58,11 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
   }
 
   return (
-    <div className="-mt-12 h-auto min-h-screen">
+    <div className="-mt-8 h-auto min-h-screen">
+      <div>
+        <VideoPlayer name={""} />
+      </div>
       <div className="relative isolate -z-10">
-        <div>
-          <VideoPlayer name={""} />
-        </div>
         <svg
           className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
           aria-hidden="true"
@@ -180,7 +180,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
       </div>
 
       {/* Content section */}
-      <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-8">
+      <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-0">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Our mission

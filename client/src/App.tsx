@@ -7,6 +7,7 @@ import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import VideoPlayer from "./components/VideoPlayer";
 import "./App.css";
 
 export interface IAppProps {}

@@ -58,11 +58,11 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
   }
 
   return (
-    <div className="mt-12 h-auto min-h-screen">
-      <VideoPlayer name={""} />
-      <main className="isolate " />
-      {/* Hero section */}
+    <div className="-mt-12 h-auto min-h-screen">
       <div className="relative isolate -z-10">
+        <div>
+          <VideoPlayer name={""} />
+        </div>
         <svg
           className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
           aria-hidden="true"
@@ -104,6 +104,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
             }}
           />
         </div>
+
         <div className="overflow-hidden">
           <div className="mx-auto max-w-7xl px-6 pb-32 pt-36 sm:pt-60 lg:px-8 lg:pt-32">
             <div className="mx-auto max-w-2xl gap-x-14 lg:mx-0 lg:flex lg:max-w-none lg:items-center">
@@ -125,9 +126,9 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                   Flooring.
                 </p>
               </div>
-              <div className="mt-14 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
-                <div className="ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
-                  <div className="relative">
+              <div className=" mt-24 flex justify-end gap-8 sm:-mt-44 sm:justify-start sm:pl-20 lg:mt-0 lg:pl-0">
+                <div className=" ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
+                  <div className="">
                     <img
                       src={Bath}
                       alt="Bathroom floor image"

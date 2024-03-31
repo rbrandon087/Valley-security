@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Careers from "./pages/Careers";
 import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
-import VideoBackground from "./components/VideoBackground";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -16,7 +15,6 @@ const App: React.FC = () => {
   return (
     <Router>
       <Navbar name={""} />
-      <VideoBackground name={""} video={""} />
       <Routes>
         <Route
           path="/Homepage"

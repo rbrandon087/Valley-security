@@ -6,7 +6,7 @@ export interface IVideoPlayerProps {
 }
 
 const VideoPlayer: React.FunctionComponent<IVideoPlayerProps> = ({ name }) => {
-  const videoUrl = "https://youtu.be/Fxl6OP_qe2A?si=94C6o77md7qLtOdj";
+  const videoUrl = "https://vimeo.com/929226812?share=copy";
   return (
     <div className="h-screen">
       <img

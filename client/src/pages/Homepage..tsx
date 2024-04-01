@@ -9,7 +9,8 @@ import Bedroom from "../public/window-view.jpg";
 import Hammer from "../public/Hammer.jpg";
 import Grady from "../public/Grady.jpg";
 import Demo from "../public/demo.jpg";
-import VideoPlayer from "../components/VideoPlayer";
+
+import ImgBack from "../components/ImgBack";
 
 export interface IHomepageProps {
   name: string;
@@ -58,40 +59,10 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
   }
 
   return (
-    <div className="-mt-8 h-auto min-h-screen">
-      <div>
-        <VideoPlayer name={""} />
-      </div>
-      <div className="relative isolate -z-10">
-        <svg
-          className="absolute inset-x-0 top-0 -z-10 h-[64rem] w-full stroke-gray-200 [mask-image:radial-gradient(32rem_32rem_at_center,white,transparent)]"
-          aria-hidden="true"
-        >
-          <defs>
-            <pattern
-              id="1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84"
-              width={200}
-              height={200}
-              x="50%"
-              y={-1}
-              patternUnits="userSpaceOnUse"
-            >
-              <path d="M.5 200V.5H200" fill="none" />
-            </pattern>
-          </defs>
-          <svg x="50%" y={-1} className="overflow-visible fill-gray-50">
-            <path
-              d="M-200 0h201v201h-201Z M600 0h201v201h-201Z M-400 600h201v201h-201Z M200 800h201v201h-201Z"
-              strokeWidth={0}
-            />
-          </svg>
-          <rect
-            width="100%"
-            height="100%"
-            strokeWidth={0}
-            fill="url(#1f932ae7-37de-4c0a-a8b0-a6e3b4d44b84)"
-          />
-        </svg>
+    <div className="-mt-8 h-auto min-h-screen relative">
+      <ImgBack name={""} />
+      {/* Content section */}
+      <div className="relative isolate -z-10 ">
         <div
           className="absolute left-1/2 right-0 top-0 -z-10 -ml-24 transform-gpu overflow-hidden blur-3xl lg:ml-24 xl:ml-48"
           aria-hidden="true"
@@ -134,7 +105,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                       alt="Bathroom floor image"
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl " />
                   </div>
                 </div>
                 <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
@@ -144,7 +115,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl " />
                   </div>
                   <div className="relative">
                     <img
@@ -152,7 +123,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl " />
                   </div>
                 </div>
                 <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
@@ -162,7 +133,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
-                    <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-inset ring-gray-900/10" />
+                    <div className="pointer-events-none absolute inset-0 rounded-xl " />
                   </div>
                   <div className="relative">
                     <img
@@ -257,7 +228,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
         </div>
       </div>
 
-      {/* Logo cloud */}
+      {/* checker styled div*/}
       <div className="relative isolate -z-10 mt-32 sm:mt-48">
         <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
           <svg

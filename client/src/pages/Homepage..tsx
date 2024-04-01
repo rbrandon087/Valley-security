@@ -13,6 +13,7 @@ import Kitchen from "../public/kitchen-smash.jpg";
 import Office from "../public/office-smash.jpg";
 
 import ImgBack from "../components/ImgBack";
+import ReviewSection from "../components/ReviewSection";
 
 export interface IHomepageProps {
   name: string;
@@ -327,18 +328,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
           </div>
         </div>
       </div>
-      {/* Ratings bar */}
-      <div className="min-h-0.5 mt-40">
-        <footer className="bg-bar px-2 sm:px-6 lg:px-8">
-          <div className="mx-auto max-w-7xl px-6 py-12 sm:flex md:items-center sm:justify-center lg:px-96 ">
-            <div className="mt-8 md:order-1 md:mt-0">
-              <h1 className="text-center text-3xl font-bold tracking-tight sm:text-3xl text-gray-200">
-                Reviews
-              </h1>
-            </div>
-          </div>
-        </footer>
-      </div>
+      <ReviewSection name={""} />
       {/* Ratings Section */}
       <div className="bg-white grid h-screen place-items-center ">
         <div>

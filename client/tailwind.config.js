@@ -7,6 +7,7 @@ module.exports = {
         'bar': '#2E4F88',
         'state': '#1127ba',
         'light': '#81d3ef',
+        'grey': '#939598',
       },
       spacing: {
         '112': '52rem',

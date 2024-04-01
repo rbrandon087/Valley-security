@@ -6,9 +6,11 @@ import Close from "../public/closeup.jpg";
 import Floor from "../public/floor-view.jpg";
 import Shiny from "../public/white.jpg";
 import Bedroom from "../public/window-view.jpg";
-import Hammer from "../public/Hammer.jpg";
+import Smash from "../public/smash.jpg";
 import Grady from "../public/Grady.jpg";
 import Demo from "../public/demo.jpg";
+import Kitchen from "../public/kitchen-smash.jpg";
+import Office from "../public/office-smash.jpg";
 
 import ImgBack from "../components/ImgBack";
 
@@ -273,15 +275,22 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                 Demolition
               </h2>
               <p className="mt-6 text-xl leading-8 text-gray-600">
-                Quasi est quaerat. Sit molestiae et. Provident ad dolorem
-                occaecati eos iste. Soluta rerum quidem minus ut molestiae velit
-                error quod. Excepturi quidem expedita molestias quas.
+                At our flooring company, we’re fueled by passion for creating
+                exceptional spaces. Our unique approach combines both
+                installation and demolition services, ensuring a seamless
+                experience for our clients. Safety is our top priority: our
+                skilled team follows strict protocols during every phase. We’re
+                committed to environmental responsibility, recycling materials
+                from demolished floors and offering sustainable options. Client
+                testimonials speak to our expertise, and we’re dedicated to
+                customization, collaborating closely with clients to meet their
+                unique needs. As a community-oriented business, we sponsor local
+                events and share educational content on flooring trends and
+                care. Our professionalism, reliability, and transparent
+                communication set us apart. Join us in transforming spaces, one
+                floor at a time!
               </p>
-              <p className="mt-6 text-base leading-7 text-gray-600">
-                Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-                lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat
-                fugiat. Quasi aperiam sit non sit neque reprehenderit.
-              </p>
+              <p className="mt-6 text-base leading-7 text-gray-600"></p>
             </div>
             <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
               <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
@@ -294,21 +303,21 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
               <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
                 <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
                   <img
-                    src="https://images.unsplash.com/photo-1605656816944-971cd5c1407f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    src={Smash}
                     alt=""
                     className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                   />
                 </div>
                 <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
                   <img
-                    src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1152&h=842&q=80"
+                    src={Kitchen}
                     alt=""
                     className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
                   />
                 </div>
                 <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
                   <img
-                    src="https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=768&h=604&q=80"
+                    src={Office}
                     alt=""
                     className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
                   />

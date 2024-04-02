@@ -1,7 +1,6 @@
 import React from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
-import CareersImage from "../public/Careers.jpg";
 
 export interface ICareersProps {
   name: string;
@@ -9,27 +8,15 @@ export interface ICareersProps {
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   return (
-    <div className="relative isolate bg-white mt-24 ">
+    <div className="relative isolate bg-white mt-8 ">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
-            <div className="absolute inset-y-0 right-0 -z-10 w-full overflow-hidden ring-1 ring-white/5 lg:w-1/2">
+            <div className="absolute inset-y-0 right-0 -z-10 w-full  ">
               <svg
                 className="absolute inset-0 h-full w-full stroke-bar [mask-image:radial-gradient(100%_100%_at_top_right,white,transparent)] opacity-50"
                 aria-hidden="true"
               >
-                <defs>
-                  <pattern
-                    id="54f88622-e7f8-4f1d-aaf9-c2f5e46dd1f2"
-                    width={200}
-                    height={200}
-                    x="100%"
-                    y={-1}
-                    patternUnits="userSpaceOnUse"
-                  >
-                    <path d="M130 200V.5M.5 .5H200" fill="none" />
-                  </pattern>
-                </defs>
                 <svg x="100%" y={-1} className="overflow-visible fill-white">
                   <path d="M-470.5 0h201v201h-201Z" strokeWidth={0} />
                 </svg>
@@ -175,7 +162,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
               <div className="sm:col-span-2">
                 <label
                   htmlFor="phone-number"
-                  className="block text-sm font-semibold leading-6 text-white"
+                  className="block text-sm font-semibold leading-6 text-black"
                 >
                   Phone number
                 </label>
@@ -185,7 +172,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     name="phone-number"
                     id="phone-number"
                     autoComplete="tel"
-                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>

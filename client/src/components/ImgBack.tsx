@@ -8,7 +8,7 @@ export interface IVideoPlayerProps {
 const VideoPlayer: React.FunctionComponent<IVideoPlayerProps> = ({ name }) => {
   return (
     <div>
-      <img src={LasVegas}></img>
+      <img src={LasVegas} className="h-screen bg-cover bg-center"></img>
     </div>
   );
 };

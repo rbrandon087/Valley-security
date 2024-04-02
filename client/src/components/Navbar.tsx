@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 import Silver from "../public/log.png";
+import CallButton from "./CallButton";
 
 interface INavbarProps {
   name: string;
@@ -69,7 +70,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
               </svg>
             </button>
           </div>
-
+          {/* Company  Logo */}
           <div className="flex flex-1 items-center justify-center text-center ">
             <div className="hidden sm:ml-6 sm:block ">
               <div className="flex md:absolute left-6">
@@ -83,9 +84,10 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
                   </a>
                 </div>
               </div>
+              {/* Call Button*/}
+              <CallButton name={""} />
               <div className="flex space-x-4 ">
-                {/* Image Logo */}
-
+                {/* Links */}
                 <div className="flex lg:flex-1  items-center">
                   <a
                     href="/Homepage"
@@ -131,19 +133,21 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
         </div>
 
         <div
-          className={`sm:hidden ${isMenuOpen ? "block" : "hidden"} `}
+          className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}
           id="mobile-menu"
         >
+          <CallButton name={""} />
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
               href="/Homepage"
-              className="p-2 px-4 group font-medium text-sm "
+              className="p-2 px-4 group font-medium text-sm"
               aria-current="page"
               onClick={toggleMenu}
             >
               Home
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
+
             <a href="/Gallery" className="p-2 px-4 group font-medium text-sm">
               Gallery
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>

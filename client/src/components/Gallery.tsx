@@ -14,7 +14,7 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ name }) => {
             Flooring Showcase
           </h2>
           <p className="mt-2 text-lg leading-8 text-gray-600">
-            Learn how to grow your business with our expert advice.
+            Every step begins with the right floor.
           </p>
         </div>
       </div>
@@ -26,32 +26,9 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ name }) => {
               <img
                 className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
                 src={Display}
-                alt=""
+                alt="Home floor image"
               />
             </div>
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
-            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
-              <h1 className="font-dmserif text-3xl font-bold text-white">
-                Commercial
-              </h1>
-              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
-                dolore adipisci placeat.
-              </p>
-              <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-                See More
-              </button>
-            </div>
-          </div>
-          <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
-            <div className="h-96 w-72 mx-auto">
-              <img
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                src={Dance}
-                alt=""
-              />
-            </div>
-            {/* first image*/}
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
             <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
               <h1 className="font-dmserif text-3xl font-bold text-white">
@@ -61,9 +38,36 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ name }) => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
                 dolore adipisci placeat.
               </p>
-              <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
-                See More
-              </button>
+              <a href="/Residential">
+                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                  See More
+                </button>
+              </a>
+            </div>
+          </div>
+          <div className="group relative cursor-pointer items-center justify-center overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
+            <div className="h-96 w-72 mx-auto">
+              <img
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                src={Dance}
+                alt="Dance Studio image"
+              />
+            </div>
+            {/* first image*/}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black group-hover:from-black/70 group-hover:via-black/60 group-hover:to-black/70"></div>
+            <div className="absolute inset-0 flex translate-y-[60%] flex-col items-center justify-center px-9 text-center transition-all duration-500 group-hover:translate-y-0">
+              <h1 className="font-dmserif text-3xl font-bold text-white">
+                Commercial
+              </h1>
+              <p className="mb-3 text-lg italic text-white opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis
+                dolore adipisci placeat.
+              </p>
+              <a href="./Commercial">
+                <button className="rounded-full bg-neutral-900 py-2 px-3.5 font-com text-sm capitalize text-white shadow shadow-black/60">
+                  See More
+                </button>
+              </a>
             </div>
           </div>
         </div>

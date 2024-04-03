@@ -8,6 +8,8 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./App.css";
+import Residential from "./pages/Residential";
+import Commercial from "./pages/Commercial";
 
 export interface IAppProps {}
 
@@ -21,6 +23,8 @@ const App: React.FC = () => {
           element={<Homepage name={""} description={""} />}
         />
         <Route path="/Gallery" element={<Gallery name={""} />} />
+        <Route path="/Residential" element={<Residential name={""} />} />
+        <Route path="/Commercial" element={<Commercial name={""} />} />
         <Route
           path="/About"
           element={

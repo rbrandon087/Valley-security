@@ -1,6 +1,16 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import Piano from "../public/piano.jpg";
+import Piano from "../assets/piano.jpg";
+import frontDoor from "../assets/front-door.jpg";
+import homeFloor from "../assets/home-floor.jpg";
+import livingRoom from "../assets/living.jpg";
+import Rocks from "../assets/rocks.jpg";
+import roomFloor from "../assets/room-floor.jpg";
+import showerFloor from "../assets/shower-floor.jpg";
+import stairsDown from "../assets/stairs-down.jpg";
+import stairsUp from "../assets/stairs-up.jpg";
+import tightRoom from "../assets/tight-room.jpg";
+import Wall from "../assets/wall.jpg";
 
 export interface IResidentialProps {
   name: string;
@@ -30,7 +40,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={frontDoor}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -41,7 +51,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={homeFloor}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -52,7 +62,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={livingRoom}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -63,7 +73,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={Rocks}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -74,7 +84,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={roomFloor}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -85,7 +95,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={showerFloor}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -96,7 +106,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={stairsDown}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -107,7 +117,7 @@ const Residential: React.FunctionComponent<IResidentialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={stairsUp}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />

@@ -20,11 +20,11 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ name }) => {
       </div>
       {/* Image hover here!*/}
       <div className="flex min-h-screen items-center justify-center  ">
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-2  ">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2  ">
           <div className="group relative cursor-pointer items-center justify-center  overflow-hidden transition-shadow hover:shadow-xl hover:shadow-black/30">
             <div className="h-96 w-72 mx-auto ">
               <img
-                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
+                className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125 "
                 src={Display}
                 alt="Home floor image"
               />

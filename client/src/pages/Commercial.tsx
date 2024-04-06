@@ -1,6 +1,9 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
 import Piano from "../assets/piano.jpg";
+import Carpet from "../assets/commercial/carpet-floor.jpg";
+import danceFloor from "../assets/commercial/dance.jpg";
+import whiteWall from "../assets/commercial/white-wall.jpg";
 
 export interface ICommercialProps {
   name: string;
@@ -19,7 +22,7 @@ const Commercial: React.FunctionComponent<ICommercialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={Carpet}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -30,7 +33,7 @@ const Commercial: React.FunctionComponent<ICommercialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
+                  src={danceFloor}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />
@@ -41,73 +44,7 @@ const Commercial: React.FunctionComponent<ICommercialProps> = ({ name }) => {
             <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
               <LazyLoad>
                 <img
-                  src={Piano}
-                  alt=""
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </LazyLoad>
-            </div>
-          </a>
-          <a className="group">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-              <LazyLoad>
-                <img
-                  src={Piano}
-                  alt=""
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </LazyLoad>
-            </div>
-          </a>
-          <a className="group">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-              <LazyLoad>
-                <img
-                  src={Piano}
-                  alt=""
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </LazyLoad>
-            </div>
-          </a>
-          <a className="group">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-              <LazyLoad>
-                <img
-                  src={Piano}
-                  alt=""
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </LazyLoad>
-            </div>
-          </a>
-          <a className="group">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-              <LazyLoad>
-                <img
-                  src={Piano}
-                  alt=""
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </LazyLoad>
-            </div>
-          </a>
-          <a className="group">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-              <LazyLoad>
-                <img
-                  src={Piano}
-                  alt=""
-                  className="h-full w-full object-cover object-center group-hover:opacity-75"
-                />
-              </LazyLoad>
-            </div>
-          </a>
-          <a className="group">
-            <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-lg sm:aspect-h-3 sm:aspect-w-2">
-              <LazyLoad>
-                <img
-                  src={Piano}
+                  src={whiteWall}
                   alt=""
                   className="h-full w-full object-cover object-center group-hover:opacity-75"
                 />

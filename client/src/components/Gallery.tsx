@@ -2,6 +2,7 @@ import React from "react";
 import LazyLoad from "react-lazyload";
 import Display from "../public/pic-display.jpg";
 import Dance from "../public/dance-display.jpg";
+
 export interface IGalleryProps {
   name: string;
 }

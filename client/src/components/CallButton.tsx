@@ -11,7 +11,7 @@ const CallButton: React.FunctionComponent<ICallButtonProps> = ({ name }) => {
         <div className="flex flex-shrink- items-center">
           <a
             href="tel:702-371-9920"
-            className="rounded-full bg-white px-4 py-2.5 text-sm font-semibold text-black shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-bar"
+            className="bg-bar hover:bg-grey text-white font-bold py-2 px-4 rounded-full"
           >
             Call Us
           </a>

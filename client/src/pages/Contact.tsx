@@ -127,7 +127,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ name }) => {
                 <div className="mt-10 flex justify-end border-t border-gray-900/10 pt-8">
                   <button
                     type="submit"
-                    className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="bg-bar hover:bg-grey text-white font-bold py-2 px-4 rounded-full"
                   >
                     Send message
                   </button>

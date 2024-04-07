@@ -225,7 +225,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
             <div className="mt-8 flex justify-end">
               <button
                 type="submit"
-                className="rounded-md bg-bar px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-500"
+                className="bg-bar hover:bg-grey text-white font-bold py-2 px-4 rounded-full"
               >
                 Submit
               </button>

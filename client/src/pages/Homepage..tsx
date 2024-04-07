@@ -64,7 +64,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
   }
 
   return (
-    <div className="-mt-12 h-auto min-h-screen relative">
+    <div className="-mt-16 h-auto min-h-screen relative">
       <ImgBack name={""} />
       <Banner name={""} />
       {/* Content section */}

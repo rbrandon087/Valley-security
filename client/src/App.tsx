@@ -25,20 +25,7 @@ const App: React.FC = () => {
         <Route path="/Gallery" element={<Gallery name={""} />} />
         <Route path="/Residential" element={<Residential name={""} />} />
         <Route path="/Commercial" element={<Commercial name={""} />} />
-        <Route
-          path="/About"
-          element={
-            <About
-              name={""}
-              person={{
-                role: undefined,
-                bio: undefined,
-                name: "",
-                imageUrl: "",
-              }}
-            />
-          }
-        />
+        <Route path="/About" element={<About name={""} />} />
         <Route path="/Contact" element={<Contact name={""} rows={0} />} />
         <Route path="/Careers" element={<Careers name={""} />} />
       </Routes>

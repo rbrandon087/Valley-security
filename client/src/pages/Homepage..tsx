@@ -15,6 +15,7 @@ import Office from "../public/office-smash.jpg";
 
 import ImgBack from "../components/ImgBack";
 import ReviewSection from "../components/ReviewSection";
+import Banner from "../components/Banner";
 
 export interface IHomepageProps {
   name: string;
@@ -63,8 +64,9 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
   }
 
   return (
-    <div className="-mt-8 h-auto min-h-screen relative">
+    <div className="-mt-12 h-auto min-h-screen relative">
       <ImgBack name={""} />
+      <Banner name={""} />
       {/* Content section */}
       <div className="relative isolate -z-10 ">
         <div

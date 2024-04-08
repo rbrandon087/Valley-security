@@ -13,6 +13,7 @@ import Office from "../public/office-smash.jpg";
 import ImgBack from "../components/ImgBack";
 import ReviewSection from "../components/ReviewSection";
 import Banner from "../components/Banner";
+import Hall from "../public/hall-pic.jpg";
 
 export interface IHomepageProps {
   name: string;
@@ -154,64 +155,64 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
       </div>
 
       {/* Content section */}
-      <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-0">
-        <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
+      <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-0 flex flex-col lg:flex-row gap-x-32">
+        {/* Image section */}
+        <div className="w-full lg:w-1/2">
+          <img
+            src={Hall}
+            alt="Image of Skyarc floor"
+            className="aspect-[4/2] w-full h-full object-cover xl:rounded-3xl"
+          />
+        </div>
+
+        {/* Text section */}
+        <div className="w-full lg:w-1/2 lg:pl-10 mt-6 lg:mt-0">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Our mission
           </h2>
-          <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
-            <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
-              <p className="text-xl leading-8 text-gray-600">
-                At Silver State Flooring, our mission is to create spaces that
-                welcome you home. We are committed to providing high-quality
-                flooring that sets the stage for your life’s most cherished
-                moments. Our dedication to craftsmanship, aesthetic excellence,
-                and unparalleled customer service ensures that every floor we
-                lay down is a testament to our passion for making your house
-                feel like a true home. We strive to exceed expectations, one
-                floor at a time, ensuring that every step you take is grounded
-                in beauty and durability. Welcome to the Silver State Flooring
-                family, where every floor tells a story.
+          <div className="mt-6 text-xl leading-8 text-gray-600">
+            <p>
+              At Silver State Flooring, our mission is to create spaces that
+              welcome you home. We are committed to providing high-quality
+              flooring that sets the stage for your life’s most cherished
+              moments. Our dedication to craftsmanship, aesthetic excellence,
+              and unparalleled customer service ensures that every floor we lay
+              down is a testament to our passion for making your house feel like
+              a true home. We strive to exceed expectations, one floor at a
+              time, ensuring that every step you take is grounded in beauty and
+              durability. Welcome to the Silver State Flooring family, where
+              every floor tells a story.
+            </p>
+            <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
+              <p>
+                Our team is the heartbeat of Silver State Flooring. Each member
+                brings a unique blend of skill, passion, and dedication to the
+                table, working tirelessly to ensure that every floor we install
+                is a masterpiece. From our seasoned craftsmen to our visionary
+                designers, our people are relentless in their pursuit of
+                excellence. They are not just employees; they are artisans who
+                take pride in creating a foundation that will stand the test of
+                time and bring joy to your home.
               </p>
-              <div className="mt-10 max-w-xl text-base leading-7 text-gray-700">
-                <p>
-                  Our team is the heartbeat of Silver State Flooring. Each
-                  member brings a unique blend of skill, passion, and dedication
-                  to the table, working tirelessly to ensure that every floor we
-                  install is a masterpiece. From our seasoned craftsmen to our
-                  visionary designers, our people are relentless in their
-                  pursuit of excellence. They are not just employees; they are
-                  artisans who take pride in creating a foundation that will
-                  stand the test of time and bring joy to your home.
-                </p>
-                <p className="mt-10">
-                  We believe that our work is a reflection of our commitment to
-                  our customers. Our team’s hard work is evident in every plank
-                  laid and every finish applied, ensuring that the final product
-                  is nothing short of spectacular. Their unwavering dedication
-                  to their craft is what sets us apart and makes Silver State
-                  Flooring a leader in the industry. We celebrate the diligence
-                  and tireless efforts of our team, as they are the ones who
-                  make our mission possible.
-                </p>
-              </div>
+              <p className="mt-10">
+                We believe that our work is a reflection of our commitment to
+                our customers. Our team’s hard work is evident in every plank
+                laid and every finish applied, ensuring that the final product
+                is nothing short of spectacular. Their unwavering dedication to
+                their craft is what sets us apart and makes Silver State
+                Flooring a leader in the industry. We celebrate the diligence
+                and tireless efforts of our team, as they are the ones who make
+                our mission possible.
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Image section */}
-      <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8">
-        <img
-          src={Skyarc}
-          alt=""
-          className="aspect-[4/2] w-full object-cover xl:rounded-3xl"
-        />
-      </div>
-
       {/* Values section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8 flex flex-col lg:flex-row ">
+        {/* Text section */}
+        <div className="mx-auto max-w-2xl lg:mx-0 lg:pr-10">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Our values
           </h2>
@@ -228,6 +229,15 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
             world we share. These values are the foundation of our commitment to
             you and to excellence.
           </p>
+        </div>
+
+        {/* Image section */}
+        <div className="mt-32 sm:mt-40 xl:mx-auto xl:max-w-7xl xl:px-8 lg:w-1/2 ">
+          <img
+            src={Skyarc}
+            alt=""
+            className="aspect-[4/2]  w-full lg:w-auto h-auto object-cover rounded-3xl -mt-24 "
+          />
         </div>
       </div>
 

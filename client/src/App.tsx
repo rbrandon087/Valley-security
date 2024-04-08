@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 import Homepage from "./pages/Homepage.";
 import Gallery from "./components/Gallery";
 import About from "./pages/About";
@@ -18,6 +23,7 @@ const App: React.FC = () => {
     <Router>
       <Navbar name={""} />
       <Routes>
+        <Route path="/" element={<Navigate to="/Homepage" replace />} />
         <Route
           path="/Homepage"
           element={<Homepage name={""} description={""} />}

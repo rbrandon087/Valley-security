@@ -1,5 +1,4 @@
 import React from "react";
-
 import { StarIcon } from "@heroicons/react/20/solid";
 import Skyarc from "../public/Sky-arc.jpg";
 import Bath from "../public/bathroom.jpg";
@@ -9,10 +8,8 @@ import Shiny from "../public/white.jpg";
 import Bedroom from "../public/window-view.jpg";
 import Smash from "../public/smash.jpg";
 import Grady from "../public/Grady.jpg";
-
 import Kitchen from "../public/kitchen-smash.jpg";
 import Office from "../public/office-smash.jpg";
-
 import ImgBack from "../components/ImgBack";
 import ReviewSection from "../components/ReviewSection";
 import Banner from "../components/Banner";

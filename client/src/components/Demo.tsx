@@ -7,13 +7,6 @@ export interface IDemoProps {
   name: string;
 }
 
-const features = [
-  {
-    name: "",
-    description: "",
-  },
-];
-
 const Demo: React.FunctionComponent<IDemoProps> = ({ name }) => {
   return (
     <div className="bg-white">
@@ -27,31 +20,27 @@ const Demo: React.FunctionComponent<IDemoProps> = ({ name }) => {
             </div>
 
             <dl className="mt-10 space-y-10">
-              {features.map((feature) => (
-                <div key={feature.name}>
-                  <dt className="text-sm font-medium text-gray-900">
-                    {feature.name}
-                  </dt>
-                  <dd className="mt-3 text-lg  text-gray-600">
-                    <p>
-                      {" "}
-                      As a flooring company, our demolition services are an
-                      integral part of our approach. We combine installation and
-                      demolition services for a seamless client experience. Our
-                      skilled team follows strict safety protocols during every
-                      demolition phase. Additionally, we prioritize
-                      environmental responsibility by recycling materials from
-                      demolished floors and offering sustainable options.
-                      Customization is key—we collaborate closely with clients
-                      to meet their unique needs. As a community-oriented
-                      business, we sponsor local events and share educational
-                      content on flooring trends and care. Our professionalism,
-                      reliability, and transparent communication set us apart.
-                      Join us in transforming spaces, one floor at a time!
-                    </p>
-                  </dd>
-                </div>
-              ))}
+              <div>
+                <dt className="text-sm font-medium text-gray-900"></dt>
+                <dd className="mt-3 text-lg  text-gray-600">
+                  <p>
+                    {" "}
+                    As a flooring company, our demolition services are an
+                    integral part of our approach. We combine installation and
+                    demolition services for a seamless client experience. Our
+                    skilled team follows strict safety protocols during every
+                    demolition phase. Additionally, we prioritize environmental
+                    responsibility by recycling materials from demolished floors
+                    and offering sustainable options. Customization is key—we
+                    collaborate closely with clients to meet their unique needs.
+                    As a community-oriented business, we sponsor local events
+                    and share educational content on flooring trends and care.
+                    Our professionalism, reliability, and transparent
+                    communication set us apart. Join us in transforming spaces,
+                    one floor at a time!
+                  </p>
+                </dd>
+              </div>
             </dl>
           </div>
 

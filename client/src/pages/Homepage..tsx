@@ -13,6 +13,7 @@ import Office from "../public/office-smash.jpg";
 import ImgBack from "../components/ImgBack";
 import ReviewSection from "../components/ReviewSection";
 import Banner from "../components/Banner";
+import Demo from "../components/Demo";
 
 export interface IHomepageProps {
   name: string;
@@ -154,12 +155,14 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
       </div>
 
       {/* Content section */}
+
       <div className="mx-auto -mt-12 max-w-7xl px-6 sm:mt-0 lg:px-8 xl:-mt-0">
         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-none">
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
             Our mission
           </h2>
-          <div className="mt-6 flex flex-col gap-x-8 gap-y-20 lg:flex-row">
+
+          <div className="mt-6 flex flex-col lg:flex-row gap-x-8 gap-y-20">
             <div className="lg:w-full lg:max-w-2xl lg:flex-auto">
               <p className="text-xl leading-8 text-gray-600">
                 At Silver State Flooring, our mission is to create spaces that
@@ -268,66 +271,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
       </div>
       <main />
       {/* Demolation Section */}
-      <div className="mt-32 overflow-hidden sm:mt-80">
-        <div className="mx-auto max-w-7xl px-6 lg:flex lg:px-8">
-          <div className="mx-auto grid max-w-2xl grid-cols-1 gap-x-12 gap-y-16 lg:mx-0 lg:min-w-full lg:max-w-none lg:flex-none lg:gap-y-8">
-            <div className="lg:col-end-1 lg:w-full lg:max-w-lg lg:pb-8">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Demolition
-              </h2>
-              <p className="mt-6 text-xl leading-8 text-gray-600">
-                At our flooring company, we’re fueled by passion for creating
-                exceptional spaces. Our unique approach combines both
-                installation and demolition services, ensuring a seamless
-                experience for our clients. Safety is our top priority: our
-                skilled team follows strict protocols during every phase. We’re
-                committed to environmental responsibility, recycling materials
-                from demolished floors and offering sustainable options. Client
-                testimonials speak to our expertise, and we’re dedicated to
-                customization, collaborating closely with clients to meet their
-                unique needs. As a community-oriented business, we sponsor local
-                events and share educational content on flooring trends and
-                care. Our professionalism, reliability, and transparent
-                communication set us apart. Join us in transforming spaces, one
-                floor at a time!
-              </p>
-              <p className="mt-6 text-base leading-7 text-gray-600"></p>
-            </div>
-            <div className="flex flex-wrap items-start justify-end gap-6 sm:gap-8 lg:contents">
-              <div className="w-0 flex-auto lg:ml-auto lg:w-auto lg:flex-none lg:self-end">
-                <img
-                  src={Grady}
-                  alt=""
-                  className="aspect-[7/5] w-[37rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-                />
-              </div>
-              <div className="contents lg:col-span-2 lg:col-end-2 lg:ml-auto lg:flex lg:w-[37rem] lg:items-start lg:justify-end lg:gap-x-8">
-                <div className="order-first flex w-64 flex-none justify-end self-end lg:w-auto">
-                  <img
-                    src={Smash}
-                    alt=""
-                    className="aspect-[4/3] w-[24rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
-                  />
-                </div>
-                <div className="flex w-96 flex-auto justify-end lg:w-auto lg:flex-none">
-                  <img
-                    src={Kitchen}
-                    alt=""
-                    className="aspect-[7/5] w-[37rem] max-w-none flex-none rounded-2xl bg-gray-50 object-cover"
-                  />
-                </div>
-                <div className="hidden sm:block sm:w-0 sm:flex-auto lg:w-auto lg:flex-none">
-                  <img
-                    src={Office}
-                    alt=""
-                    className="aspect-[4/3] w-[24rem] max-w-none rounded-2xl bg-gray-50 object-cover"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Demo name={""} />
       <ReviewSection name={""} />
       {/* Ratings Section */}
       <div className="bg-white grid h-screen place-items-center ">

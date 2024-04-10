@@ -10,6 +10,7 @@ import ReviewSection from "../components/ReviewSection";
 import Banner from "../components/Banner";
 import Demo from "../components/Demo";
 import Mission from "../components/Mission";
+import teamOffice from "../public/team.jpg";
 
 export interface IHomepageProps {
   name: string;
@@ -153,62 +154,42 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
       {/* Our Missioon*/}
       <Mission name={""} />
       {/* Values section */}
-      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
-        <div className="mx-auto max-w-2xl lg:mx-0">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Our values
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-gray-600">
-            Integrity, Craftsmanship, and Innovation are the cornerstones of
-            Silver State Flooring. We uphold Integrity in every interaction,
-            ensuring honesty and transparency guide our path. Craftsmanship is
-            our art; we bring decades of experience and attention to detail to
-            every project, guaranteeing floors that are not only beautiful but
-            also enduring. Innovation drives us forward; we embrace cutting-edge
-            techniques and materials to provide you with the best flooring
-            solutions. Above all, we value Community and Sustainability,
-            striving to make a positive impact in the homes we touch and the
-            world we share. These values are the foundation of our commitment to
-            you and to excellence.
-          </p>
-        </div>
-      </div>
-
-      {/* checker styled div*/}
-      <div className="relative isolate -z-10 mt-32 sm:mt-48">
-        <div className="absolute inset-x-0 top-1/2 -z-10 flex -translate-y-1/2 justify-center overflow-hidden [mask-image:radial-gradient(50%_45%_at_50%_55%,white,transparent)]">
-          <svg
-            className="h-[40rem] w-[80rem] flex-none stroke-gray-200"
-            aria-hidden="true"
-          >
-            <defs>
-              <pattern
-                id="e9033f3e-f665-41a6-84ef-756f6778e6fe"
-                width={200}
-                height={200}
-                x="50%"
-                y="50%"
-                patternUnits="userSpaceOnUse"
-                patternTransform="translate(-100 0)"
-              >
-                <path d="M.5 200V.5H200" fill="none" />
-              </pattern>
-            </defs>
-            <svg x="50%" y="50%" className="overflow-visible fill-gray-50">
-              <path
-                d="M-300 0h201v201h-201Z M300 200h201v201h-201Z"
-                strokeWidth={0}
+      <div className="bg-white">
+        <div className="mx-auto max-w-10xl px-4 py-16 sm:px-6 sm:py-24 lg:px-8">
+          <div className="relative overflow-hidden rounded-lg">
+            <div className="absolute inset-0">
+              <img
+                src={teamOffice}
+                alt=""
+                className="h-full w-full object-cover object-center"
               />
-            </svg>
-            <rect
-              width="100%"
-              height="100%"
-              strokeWidth={0}
-              fill="url(#e9033f3e-f665-41a6-84ef-756f6778e6fe)"
-            />
-          </svg>
+            </div>
+            <div className="relative bg-gray-900 bg-opacity-75 px-6 py-32 sm:px-12 sm:py-40 lg:px-16">
+              <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
+                <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                  <span className="block sm:inline">Our Values</span>
+                </h2>
+                <p className="mt-3 text-xl text-white">
+                  Integrity, Craftsmanship, and Innovation are the cornerstones
+                  of Silver State Flooring. We uphold Integrity in every
+                  interaction, ensuring honesty and transparency guide our path.
+                  Craftsmanship is our art; we bring decades of experience and
+                  attention to detail to every project, guaranteeing floors that
+                  are not only beautiful but also enduring. Innovation drives us
+                  forward; we embrace cutting-edge techniques and materials to
+                  provide you with the best flooring solutions. Above all, we
+                  value Community and Sustainability, striving to make a
+                  positive impact in the homes we touch and the world we share.
+                  These values are the foundation of our commitment to you and
+                  to excellence.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      {/* checker styled div*/}
+
       <main />
       {/* Demolation Section */}
       <Demo name={""} />

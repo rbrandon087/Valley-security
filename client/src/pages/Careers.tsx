@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
+import { doc } from "prettier";
 
 export interface ICareersProps {
   name: string;

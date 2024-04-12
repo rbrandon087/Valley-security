@@ -1,0 +1,1 @@
+//Define data models (e.g., Quote, Resume) to communicate with the database.

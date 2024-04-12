@@ -1,0 +1,1 @@
+//Define API routes (e.g., /api/quote, /api/resume).

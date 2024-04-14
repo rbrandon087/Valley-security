@@ -1,4 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
+import axios from "axios";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
@@ -75,12 +76,15 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
 
     try {
       // Send form data to server
-      const response = await fetch("YOUR_FORM_ENDPOINT_URL", {
-        method: "POST",
-        body: formDataToSend,
-      });
+      const response = await axios.post(
+        "YOUR_FORM_ENDPOINT_URL",
+        formDataToSend,
+        {
+          headers: {},
+        },
+      );
 
-      if (response.ok) {
+      if (response.status === 200) {
         console.log("Form submitted successfully!");
         setFormData({
           firstName: "",

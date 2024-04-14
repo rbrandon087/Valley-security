@@ -6,9 +6,17 @@ import { doc } from "prettier";
 export interface ICareersProps {
   name: string;
 }
+interface State {
+  firstName: string;
+  lastName: string;
+  email: string;
+  phoneNumber: string;
+  message: string;
+  resume: File | null;
+}
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<State>({
     firstName: "",
     lastName: "",
     email: "",
@@ -16,6 +24,32 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
     message: "",
     resume: null,
   });
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = e.target;
+
+    if (e.target.type === "file") {
+      const fileInput = e.target as HTMLInputElement;
+      if (fileInput.files && fileInput.files.length > 0) {
+        setFormData((prevData) => ({
+          ...prevData,
+          [name]: fileInput.files[0],
+        }));
+      } else {
+        // Reset the file input
+        e.target.value = ""; // Clear the file input
+        // Optionally, you can provide feedback to the user
+        console.log("Please select a file.");
+      }
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -62,39 +96,6 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
     } catch (error) {
       console.error("Error submitting form:", error);
     }
-  };
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
-  ) => {
-    const { name, value } = e.target;
-
-    if (e.target.type === "file") {
-      const fileInput = e.target as HTMLInputElement;
-      if (isFileInput(fileInput)) {
-        if (fileInput.files && fileInput.files.length > 0) {
-          setFormData((prevData) => ({
-            ...prevData,
-            [name]: fileInput.files[0],
-          }));
-        } else {
-          // Reset the file input
-          e.target.value = ""; // Clear the file input
-          // Optionally, you can provide feedback to the user
-          console.log("Please select a file.");
-        }
-      }
-    } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
-  };
-
-  // Type guard to check if the input is a file input
-  const isFileInput = (input: HTMLInputElement): input is HTMLInputElement => {
-    return input.type === "file";
   };
 
   return (

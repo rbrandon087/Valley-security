@@ -35,7 +35,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
       if (fileInput.files && fileInput.files.length > 0) {
         setFormData((prevData) => ({
           ...prevData,
-          [name]: fileInput.files[0],
+          [name]: fileInput.files![0],
         }));
       } else {
         // Reset the file input

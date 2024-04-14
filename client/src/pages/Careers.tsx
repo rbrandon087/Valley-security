@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ChangeEvent, FormEvent, useState } from "react";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
@@ -8,6 +8,95 @@ export interface ICareersProps {
 }
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    phoneNumber: "",
+    message: "",
+    resume: null,
+  });
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const { firstName, lastName, email, phoneNumber, message, resume } =
+      formData;
+
+    // Form validation
+    if (!firstName || !lastName || !email || !phoneNumber || !message) {
+      console.log("Please fill in all fields.");
+      return;
+    }
+
+    // Prepare form data for submission
+    const formDataToSend = new FormData();
+    formDataToSend.append("firstName", firstName);
+    formDataToSend.append("lastName", lastName);
+    formDataToSend.append("email", email);
+    formDataToSend.append("phoneNumber", phoneNumber);
+    formDataToSend.append("message", message);
+    if (resume) {
+      formDataToSend.append("resume", resume);
+    }
+
+    try {
+      // Send form data to server
+      const response = await fetch("YOUR_FORM_ENDPOINT_URL", {
+        method: "POST",
+        body: formDataToSend,
+      });
+
+      if (response.ok) {
+        console.log("Form submitted successfully!");
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phoneNumber: "",
+          message: "",
+          resume: null,
+        });
+      } else {
+        console.error("Failed to submit form:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
+  };
+
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
+    const { name, value } = e.target;
+
+    if (e.target.type === "file") {
+      const fileInput = e.target as HTMLInputElement;
+      if (isFileInput(fileInput)) {
+        if (fileInput.files && fileInput.files.length > 0) {
+          setFormData((prevData) => ({
+            ...prevData,
+            [name]: fileInput.files[0],
+          }));
+        } else {
+          // Reset the file input
+          e.target.value = ""; // Clear the file input
+          // Optionally, you can provide feedback to the user
+          console.log("Please select a file.");
+        }
+      }
+    } else {
+      setFormData((prevData) => ({
+        ...prevData,
+        [name]: value,
+      }));
+    }
+  };
+
+  // Type guard to check if the input is a file input
+  const isFileInput = (input: HTMLInputElement): input is HTMLInputElement => {
+    return input.type === "file";
+  };
+
   return (
     <div className="relative isolate bg-white mt-8 ">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
@@ -217,7 +306,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     name="message"
                     id="message"
                     rows={4}
-                    className="block w-full rounded-md border-0 bg-grey/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
+                    className="block w-full rounded-md border-0 bg-grey/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                     defaultValue={""}
                   />
                 </div>

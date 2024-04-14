@@ -76,15 +76,11 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
 
     try {
       // Send form data to server
-      const response = await axios.post(
-        "postgres://postgres.ghkijztoovsjdeceinjo:[AIzaSyA9-mBrdXiAp7ZZlvgu4Ce7UvJVc4Jefiw]@aws-0-us-west-1.pooler.supabase.com:5432/postgres",
-        formDataToSend,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
+      const response = await axios.post("", formDataToSend, {
+        headers: {
+          "Content-Type": "multipart/form-data",
         },
-      );
+      });
 
       if (response.status === 200) {
         console.log("Form submitted successfully!");

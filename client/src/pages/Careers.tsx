@@ -77,10 +77,12 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
     try {
       // Send form data to server
       const response = await axios.post(
-        "YOUR_FORM_ENDPOINT_URL",
+        "postgres://postgres.ghkijztoovsjdeceinjo:[AIzaSyA9-mBrdXiAp7ZZlvgu4Ce7UvJVc4Jefiw]@aws-0-us-west-1.pooler.supabase.com:5432/postgres",
         formDataToSend,
         {
-          headers: {},
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         },
       );
 

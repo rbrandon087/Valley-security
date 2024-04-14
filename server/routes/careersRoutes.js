@@ -2,6 +2,13 @@
 const express = require('express');
 const router = express.Router();
 
+router.post('/Careers', (req, res) => {
+    const {firstName, lastName, email, phoneNumber, message, resume} = req.body
+
+    console.log(firstName + ' | ' + lastName + ' | ' + email)
+    res.send('Message sent thank you!')
+});
+
 router.get('/', function (req, res) {
     const userData = 
     [

@@ -76,11 +76,15 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
 
     try {
       // Send form data to server
-      const response = await axios.post("", formDataToSend, {
-        headers: {
-          "Content-Type": "multipart/form-data",
+      const response = await axios.post(
+        "https://kiawvbpacxgqrzdqkswp.supabase.co",
+        formDataToSend,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
         },
-      });
+      );
 
       if (response.status === 200) {
         console.log("Form submitted successfully!");
@@ -99,6 +103,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
       console.error("Error submitting form:", error);
     }
   };
+  const axiosPostData = async () => {};
 
   return (
     <div className="relative isolate bg-white mt-8 ">

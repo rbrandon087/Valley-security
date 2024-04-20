@@ -19,6 +19,10 @@ import Commercial from "./pages/Commercial";
 export interface IAppProps {}
 
 const App: React.FC = () => {
+  function handleSubmit(data: FormData): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <Router>
       <Navbar name={""} />

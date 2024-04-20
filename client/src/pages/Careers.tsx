@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import axios from "axios";
+import { Resolver, useForm } from "react-hook-form";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
@@ -7,103 +7,31 @@ import { doc } from "prettier";
 export interface ICareersProps {
   name: string;
 }
-interface State {
+type FormValues = {
   firstName: string;
   lastName: string;
-  email: string;
-  phoneNumber: string;
-  message: string;
-  resume: File | null;
-}
+};
+const resolver: Resolver<FormValues> = async (values) => {
+  return {
+    values: values.firstName ? values : {},
+    errors: !values.firstName
+      ? {
+          firstName: {
+            type: "required",
+            message: "This is required.",
+          },
+        }
+      : {},
+  };
+};
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
-  const [formData, setFormData] = useState<State>({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phoneNumber: "",
-    message: "",
-    resume: null,
-  });
-
-  const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
-  ) => {
-    const { name, value } = e.target;
-
-    if (e.target.type === "file") {
-      const fileInput = e.target as HTMLInputElement;
-      if (fileInput.files && fileInput.files.length > 0) {
-        setFormData((prevData) => ({
-          ...prevData,
-          [name]: fileInput.files![0],
-        }));
-      } else {
-        // Reset the file input
-        e.target.value = ""; // Clear the file input
-        // Optionally, you can provide feedback to the user
-        console.log("Please select a file.");
-      }
-    } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,
-      }));
-    }
-  };
-
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    const { firstName, lastName, email, phoneNumber, message, resume } =
-      formData;
-
-    // Form validation
-    if (!firstName || !lastName || !email || !phoneNumber || !message) {
-      console.log("Please fill in all fields.");
-      return;
-    }
-
-    // Prepare form data for submission
-    const formDataToSend = new FormData();
-    formDataToSend.append("firstName", firstName);
-    formDataToSend.append("lastName", lastName);
-    formDataToSend.append("email", email);
-    formDataToSend.append("phoneNumber", phoneNumber);
-    formDataToSend.append("message", message);
-    if (resume) {
-      formDataToSend.append("resume", resume);
-    }
-
-    try {
-      // Send form data to server
-      const response = await axios.post(
-        "https://kiawvbpacxgqrzdqkswp.supabase.co",
-        formDataToSend,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        },
-      );
-
-      if (response.status === 200) {
-        console.log("Form submitted successfully!");
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          phoneNumber: "",
-          message: "",
-          resume: null,
-        });
-      } else {
-        console.error("Failed to submit form:", response.statusText);
-      }
-    } catch (error) {
-      console.error("Error submitting form:", error);
-    }
-  };
-  const axiosPostData = async () => {};
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<FormValues>({ resolver });
+  const onSubmit = handleSubmit((data) => console.log(data));
 
   return (
     <div className="relative isolate bg-white mt-8 ">
@@ -199,6 +127,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
           </div>
         </div>
         {/* Form submit */}
+
         <form
           action="#"
           method="POST"

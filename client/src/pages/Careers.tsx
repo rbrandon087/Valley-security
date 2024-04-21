@@ -8,7 +8,8 @@ export interface ICareersProps {
   name: string;
 }
 type FormFields = {
-  name: string;
+  firstName: string;
+  lastName: string;
   message: string;
   email: string;
   phoneNumber: string;
@@ -138,10 +139,10 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    {...register("name")}
+                    {...register("firstName")}
                     type="text"
-                    name="name"
-                    id="name"
+                    name="firstName"
+                    id="first-name"
                     autoComplete="name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
@@ -156,10 +157,10 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    {...register("name")}
+                    {...register("lastName")}
                     type="text"
-                    name="name"
-                    id="name"
+                    name="lastName"
+                    id="last-name"
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
@@ -195,7 +196,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     {...register("phoneNumber")}
                     type="tel"
                     name="phoneNumber"
-                    id="phoneNumber"
+                    id="phone-number"
                     autoComplete="tel"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />

@@ -1,5 +1,5 @@
-import React, { ChangeEvent, FormEvent, useState } from "react";
-import { Resolver, useForm } from "react-hook-form";
+import React, { ChangeEvent, Children, FormEvent, useState } from "react";
+import { Resolver, SubmitHandler, useForm } from "react-hook-form";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
@@ -7,22 +7,12 @@ import { doc } from "prettier";
 export interface ICareersProps {
   name: string;
 }
-type FormValues = {
-  firstName: string;
-  lastName: string;
-};
-const resolver: Resolver<FormValues> = async (values) => {
-  return {
-    values: values.firstName ? values : {},
-    errors: !values.firstName
-      ? {
-          firstName: {
-            type: "required",
-            message: "This is required.",
-          },
-        }
-      : {},
-  };
+type FormFields = {
+  name: string;
+  message: string;
+  email: string;
+  phoneNumber: string;
+  resume: File;
 };
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
@@ -30,8 +20,11 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<FormValues>({ resolver });
-  const onSubmit = handleSubmit((data) => console.log(data));
+  } = useForm<FormFields>();
+
+  const onSubmit: SubmitHandler<FormFields> = (data) => {
+    console.log(data);
+  };
 
   return (
     <div className="relative isolate bg-white mt-8 ">
@@ -129,6 +122,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
         {/* Form submit */}
 
         <form
+          onSubmit={handleSubmit(onSubmit)}
           action="#"
           method="POST"
           className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
@@ -144,10 +138,11 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("name")}
                     type="text"
-                    name="first-name"
-                    id="first-name"
-                    autoComplete="given-name"
+                    name="name"
+                    id="name"
+                    autoComplete="name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
                 </div>
@@ -161,9 +156,10 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("name")}
                     type="text"
-                    name="last-name"
-                    id="last-name"
+                    name="name"
+                    id="name"
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
@@ -178,6 +174,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("email")}
                     type="email"
                     name="email"
                     id="email"
@@ -195,9 +192,10 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
+                    {...register("phoneNumber")}
                     type="tel"
-                    name="phone-number"
-                    id="phone-number"
+                    name="phoneNumber"
+                    id="phoneNumber"
                     autoComplete="tel"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
@@ -217,6 +215,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     >
                       <span>Upload a file</span>
                       <input
+                        {...register("resume")}
                         id="file-upload"
                         name="file-upload"
                         type="file"
@@ -240,6 +239,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <textarea
+                    {...register("message")}
                     name="message"
                     id="message"
                     rows={4}

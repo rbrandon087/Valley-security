@@ -1,16 +1,16 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const router = require('./routes/router');
 
 //calling express
 const app = express();
 
 //Middleware Setup
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 
-const careerRoutes = require('./routes/CareerRoutes'); // Import career routes
-const quoteRoutes = require('./routes/quoteRoutes'); // Import quote routes
+
 
 const corsOptions = {
     origin: '*',
@@ -19,10 +19,8 @@ const corsOptions = {
 }
 
 app.use(cors(corsOptions));
+app.use('/', router);
 
-// Use the routers for their respective paths
-app.use('/careers', CareerRoutes);
-app.use('/quotes', quoteRoutes);
 
 const port = 4000;
 const server = app.listen(port, () => {

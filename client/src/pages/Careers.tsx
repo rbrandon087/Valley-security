@@ -191,7 +191,12 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                   <input
                     {...register("email", {
                       required: "Email is required",
-                      validate: (value) => value.includes("@"),
+                      validate: (value) => {
+                        if (!value.includes("@")) {
+                          return "Email is required";
+                        }
+                        return true;
+                      },
                     })}
                     type="email"
                     name="email"

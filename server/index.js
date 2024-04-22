@@ -2,7 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const router = require('./routes/careersRoutes');
-const quoteRouter = require('./routes/quoteRoutes');
+const quote = require('./routes/quoteRoute');
 
 
 //calling express
@@ -22,7 +22,8 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 app.use('/', router);
-app.use('/', quoteRouter);
+app.use('/career', careerRouter);
+app.use('/quote', quoteRouter);
 
 
 const port = 4000;

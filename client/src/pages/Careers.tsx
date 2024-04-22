@@ -1,4 +1,10 @@
-import React, { ChangeEvent, Children, FormEvent, useState } from "react";
+import React, {
+  ChangeEvent,
+  Children,
+  FormEvent,
+  useState,
+  useEffect,
+} from "react";
 import axios from "axios";
 import { Resolver, SubmitHandler, useForm } from "react-hook-form";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
@@ -18,11 +24,25 @@ type FormFields = {
 };
 
 const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
+  const [data, setData] = useState<any>(null);
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormFields>();
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("http://localhost:4000");
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   const onSubmit: SubmitHandler<FormFields> = (data) => {
     console.log(data);

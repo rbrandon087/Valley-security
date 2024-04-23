@@ -2,31 +2,37 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const router = require('./routes/careersRoutes');
-const quote = require('./routes/quoteRoute');
+const quote = require('./routes/quoteRoutes');
 
-
-//calling express
+// calling express
 const app = express();
 
-//Middleware Setup
-app.use(bodyParser.json());
+// Middleware Setup
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
-
 
 const corsOptions = {
     origin: '*',
-    credentials: true, // Corrected spelling
-    optionsSuccessStatus: 200 // Corrected property name
+    credentials: true,
+    optionsSuccessStatus: 200
 }
 
 app.use(cors(corsOptions));
-app.use('/', router);
-app.use('/career', careerRouter);
-app.use('/quote', quoteRouter);
 
 
-const port = 4000;
-const server = app.listen(port, () => {
-    console.log(`listening on port ${port}`);
+app.use('/careers', router); 
+app.use('/quote', quote); 
+
+app.get('/', (req, res) => {
+    res.send('hello')
 });
+
+// Handle POST requests
+app.post('/careers', (req, res) => {
+    console.log('Received POST request:', req.body);
+    // Handle the data and send an appropriate response
+});
+
+app.listen(4000, () => {
+    console.log('Server listening on port 4000');
+})

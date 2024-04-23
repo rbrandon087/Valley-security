@@ -145,7 +145,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          action="#"
+          action="/careers"
           method="POST"
           className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
         >
@@ -271,7 +271,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                       <input
                         {...register("resume", { required: "Resume needed" })}
                         id="file-upload"
-                        name="file-upload"
+                        name="resumeFile"
                         type="file"
                         className="sr-only inset-0 w-full h-full opacity-0 cursor-pointer"
                       />

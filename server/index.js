@@ -23,9 +23,9 @@ app.use(cors(corsOptions));
 app.use('/careers', router); 
 app.use('/quote', quote); 
 
-app.get('/', (req, res) => {
-    res.send('hello')
-});
+app.get("/", (request, response) => {
+    response.status(200).send({msg: "hello world!"});
+})
 
 // Handle POST requests
 app.post('/careers', (req, res) => {

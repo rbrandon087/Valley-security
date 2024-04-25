@@ -28,8 +28,9 @@ app.get("/", (request, response) => {
 })
 
 // Handle POST requests
-app.post('/careers', (req, res) => {
-    console.log('Received POST request:', req.body);
+app.post('/api/careers', (request, response) => {
+    console.log(request.body);
+    return response.send(200)
     // Handle the data and send an appropriate response
 });
 

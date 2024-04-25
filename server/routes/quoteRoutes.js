@@ -1,5 +1,4 @@
 //Define API routes (e.g., /api/quote, /api/resume).
-//Define API routes (e.g., /api/quote, /api/resume).
 const express = require('express');
 const router = express.Router();
 

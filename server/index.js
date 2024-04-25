@@ -7,21 +7,17 @@ const quote = require('./routes/quoteRoutes');
 // calling express
 const app = express();
 
+
+const PORT = process.env.PORT || 4000;
+
+app.listen(PORT, () => {
+    console.log(`Running on port ${PORT}`);
+})
+
 // Middleware Setup
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const corsOptions = {
-    origin: '*',
-    credentials: true,
-    optionsSuccessStatus: 200
-}
-
-app.use(cors(corsOptions));
-
-
-app.use('/careers', router); 
-app.use('/quote', quote); 
 
 app.get("/", (request, response) => {
     response.status(200).send({msg: "hello world!"});
@@ -34,6 +30,3 @@ app.post('/api/careers', (request, response) => {
     // Handle the data and send an appropriate response
 });
 
-app.listen(4000, () => {
-    console.log('Server listening on port 4000');
-})

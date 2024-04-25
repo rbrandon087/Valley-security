@@ -1,1 +1,0 @@
-//Store configuration files (e.g., database connection settings).

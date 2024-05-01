@@ -1,7 +1,5 @@
 import React from "react";
 import LazyLoad from "react-lazyload";
-import Display from "../public/pic-display.jpg";
-import Dance from "../public/dance-display.jpg";
 
 export interface IGalleryProps {
   name: string;
@@ -29,7 +27,7 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ name }) => {
               <LazyLoad>
                 <img
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125 "
-                  src={Display}
+                  src={""}
                   alt="Home floor image"
                 />
               </LazyLoad>
@@ -56,7 +54,7 @@ const Gallery: React.FunctionComponent<IGalleryProps> = ({ name }) => {
               <LazyLoad>
                 <img
                   className="h-full w-full object-contain transition-transform duration-500 group-hover:rotate-3 group-hover:scale-125"
-                  src={Dance}
+                  src={""}
                   alt="Dance Studio image"
                 />
               </LazyLoad>

@@ -1,5 +1,4 @@
 import React from "react";
-import Skyarc from "../public/Sky-arc.jpg";
 
 export interface IMissionProps {
   name: string;
@@ -11,7 +10,7 @@ const Mission: React.FunctionComponent<IMissionProps> = ({ name }) => {
       <section aria-labelledby="features-heading" className="relative ">
         <div className="aspect-h-2 aspect-w-3 overflow-hidden sm:aspect-w-5 lg:aspect-none lg:absolute lg:h-full lg:w-1/2 lg:pr-4 xl:pr-16">
           <img
-            src={Skyarc}
+            src={""}
             alt="Black leather journal with silver steel disc binding resting on wooden shelf with machined steel pen."
             className="h-full w-full object-cover object-center lg:h-full lg:w-full"
           />

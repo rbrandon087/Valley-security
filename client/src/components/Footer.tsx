@@ -55,8 +55,7 @@ const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
           </div>
           <div className="mt-8 md:order-1 md:mt-0">
             <p className="text-center text-xs leading-5 text-gray-200">
-              &copy; 2018 BY SILVER STATE FLOORING LLC, Inc. All rights
-              reserved.
+              &copy; Brandon Zavaleta
             </p>
           </div>
         </div>

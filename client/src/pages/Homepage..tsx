@@ -1,6 +1,5 @@
 import React from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
-
 import ImgBack from "../components/ImgBack";
 import ReviewSection from "../components/ReviewSection";
 import Banner from "../components/Banner";

@@ -1,16 +1,11 @@
 import React from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
-import Bath from "../public/bathroom.jpg";
-import Close from "../public/closeup.jpg";
-import Floor from "../public/floor-view.jpg";
-import Shiny from "../public/white.jpg";
-import Bedroom from "../public/window-view.jpg";
+
 import ImgBack from "../components/ImgBack";
 import ReviewSection from "../components/ReviewSection";
 import Banner from "../components/Banner";
 import Demo from "../components/Demo";
 import Mission from "../components/Mission";
-import teamOffice from "../public/team.jpg";
 
 export interface IHomepageProps {
   name: string;
@@ -102,7 +97,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                 <div className=" ml-auto w-44 flex-none space-y-8 pt-32 sm:ml-0 sm:pt-80 lg:order-last lg:pt-36 xl:order-none xl:pt-80">
                   <div className="">
                     <img
-                      src={Bath}
+                      src={""}
                       alt="Bathroom floor image"
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
@@ -112,7 +107,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                 <div className="mr-auto w-44 flex-none space-y-8 sm:mr-0 sm:pt-52 lg:pt-36">
                   <div className="relative">
                     <img
-                      src={Close}
+                      src={""}
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
@@ -120,7 +115,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                   </div>
                   <div className="relative">
                     <img
-                      src={Floor}
+                      src={""}
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
@@ -130,7 +125,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                 <div className="w-44 flex-none space-y-8 pt-32 sm:pt-0">
                   <div className="relative">
                     <img
-                      src={Shiny}
+                      src={""}
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
@@ -138,7 +133,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                   </div>
                   <div className="relative">
                     <img
-                      src={Bedroom}
+                      src={""}
                       alt=""
                       className="aspect-[2/3] w-full rounded-xl bg-gray-900/5 object-cover shadow-lg"
                     />
@@ -159,7 +154,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
           <div className="relative overflow-hidden rounded-lg">
             <div className="absolute inset-0">
               <img
-                src={teamOffice}
+                src={""}
                 alt=""
                 className="h-full w-full object-cover object-center"
               />

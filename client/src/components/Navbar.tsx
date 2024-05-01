@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
-import Silver from "../public/log.png";
+
 import CallButton from "./CallButton";
 
 interface INavbarProps {
@@ -25,7 +25,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
             <div className="flex md:absolute md:inset-y-0 md:left-0 lg:static xl:col-span-2">
               <div className="flex flex-shrink-0 items-center">
                 <a href="#">
-                  <img className="h-8 w-auto" src={Silver} alt="Your Company" />
+                  <img className="h-8 w-auto" src={""} alt="Your Company" />
                 </a>
               </div>
             </div>
@@ -76,11 +76,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
               <div className="flex md:absolute left-6">
                 <div className="flex flex-shrink- items-center">
                   <a href="/Homepage">
-                    <img
-                      className="h-8 w-auto "
-                      src={Silver}
-                      alt="Your Company"
-                    />
+                    <img className="h-8 w-auto " src={""} alt="Your Company" />
                   </a>
                 </div>
               </div>

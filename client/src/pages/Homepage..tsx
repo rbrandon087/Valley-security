@@ -1,6 +1,5 @@
 import React from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
-
 import ReviewSection from "../components/ReviewSection";
 import Demo from "../components/Demo";
 import Mission from "../components/Mission";

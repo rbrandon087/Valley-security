@@ -91,13 +91,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
                     Home
                     <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
-                  <a
-                    href="/Gallery"
-                    className="p-2 px-4 group font-medium text-sm"
-                  >
-                    Gallery
-                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
-                  </a>
+
                   <a
                     href="/About"
                     className="p-2 px-4 group font-medium text-sm"

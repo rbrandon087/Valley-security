@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "../styles/Navbar.css";
 
-import CallButton from "./CallButton";
-
 interface INavbarProps {
   name: string;
 }
@@ -81,7 +79,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
                 </div>
               </div>
               {/* Call Button*/}
-              <CallButton name={""} />
+
               <div className="flex space-x-4 ">
                 {/* Links */}
                 <div className="flex lg:flex-1  items-center">
@@ -132,7 +130,6 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
           className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}
           id="mobile-menu"
         >
-          <CallButton name={""} />
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
               href="/Homepage"

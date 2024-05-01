@@ -1,10 +1,10 @@
 import React from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
-import ImgBack from "../components/ImgBack";
+
 import ReviewSection from "../components/ReviewSection";
-import Banner from "../components/Banner";
 import Demo from "../components/Demo";
 import Mission from "../components/Mission";
+import FirstImg from "../components/FirstImg";
 
 export interface IHomepageProps {
   name: string;
@@ -54,8 +54,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
 
   return (
     <div className="-mt-16 h-auto min-h-screen relative">
-      <ImgBack name={""} />
-      <Banner name={""} />
+      <FirstImg name={""} />
       {/* Content section */}
       <div className="relative isolate -z-10 ">
         <div

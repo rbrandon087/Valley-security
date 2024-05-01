@@ -1,10 +1,10 @@
 import React from "react";
 
-export interface IVideoPlayerProps {
+export interface IFirstImgProps {
   name: string;
 }
 
-const VideoPlayer: React.FunctionComponent<IVideoPlayerProps> = ({ name }) => {
+const FirstImg: React.FunctionComponent<IFirstImgProps> = ({ name }) => {
   return (
     <div>
       <img src={""} className="h-screen bg-cover bg-center" />
@@ -12,4 +12,4 @@ const VideoPlayer: React.FunctionComponent<IVideoPlayerProps> = ({ name }) => {
   );
 };
 
-export default VideoPlayer;
+export default FirstImg;

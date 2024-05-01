@@ -1,6 +1,5 @@
 import React from "react";
 import { StarIcon } from "@heroicons/react/20/solid";
-import ReviewSection from "../components/ReviewSection";
 import Demo from "../components/Demo";
 import Mission from "../components/Mission";
 import FirstImg from "../components/FirstImg";
@@ -185,7 +184,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
       <main />
       {/* Demolation Section */}
       <Demo name={""} />
-      <ReviewSection name={""} />
+
       {/* Ratings Section */}
       <div className="bg-white grid h-screen place-items-center ">
         <div>

@@ -38,8 +38,25 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
     fetchData();
   }, []);
 
-  const onSubmit: SubmitHandler<FormFields> = (data) => {
-    console.log(data);
+  const onSubmit = async (data: any) => {
+    try {
+      const response = await fetch("/api/careers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      if (response.ok) {
+        // Handle success
+        alert("Form submitted");
+      } else {
+        // Handle error
+        alert("Error submitting data");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    }
   };
 
   return (

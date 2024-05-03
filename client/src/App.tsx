@@ -12,8 +12,6 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import "./App.css";
-import Commercial from "./pages/Commercial";
-
 export interface IAppProps {}
 
 const App: React.FC = () => {
@@ -30,7 +28,6 @@ const App: React.FC = () => {
           path="/Homepage"
           element={<Homepage name={""} description={""} />}
         />
-        <Route path="/Commercial" element={<Commercial name={""} />} />
         <Route path="/About" element={<About name={""} />} />
         <Route path="/Contact" element={<Contact name={""} rows={0} />} />
         <Route path="/Careers" element={<Careers name={""} />} />

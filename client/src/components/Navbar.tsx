@@ -82,7 +82,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
 
               <div className="flex space-x-4 ">
                 {/* Links */}
-                <div className="flex lg:flex-1  items-center">
+                <div className="flex lg:flex-1  items-left">
                   <a
                     href="/Homepage"
                     className="p-2 px-4 group font-medium text-sm"

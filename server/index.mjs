@@ -20,6 +20,12 @@ app.get("/", (request, response) => {
     response.status(200).send({msg: "Hello!"});
 })
 
+app.post("/api/careers", (request, response) => {
+    const { first_name, last_name, email, message, resume, phoneNumber } = request.body;
+    console.log('Received data:', { first_name, last_name, email, message, resume, phoneNumber  })
+    response.status(200).send({msg: "Data received!" });
+})
+
 
 app.listen(PORT , () => {
     console.log(`listening on port ${PORT}`);

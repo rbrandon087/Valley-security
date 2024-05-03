@@ -25,6 +25,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ name }) => {
               <p className="mt-2 text-lg leading-8 text-gray-600">
                 Laying the Foundation for a Beautiful Home.
               </p>
+              {/* Form Info  */}
               <form action="#" method="POST" className="mt-16">
                 <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">
                   <div>
@@ -107,7 +108,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ name }) => {
                         htmlFor="message"
                         className="block text-sm font-semibold leading-6 text-gray-900"
                       >
-                        Tell us about your project.
+                        Comments / Questions
                       </label>
                       <p id="message-description" className="text-gray-400">
                         Max 500 characters
@@ -129,7 +130,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ name }) => {
                     type="submit"
                     className="bg-bar hover:bg-grey text-white font-bold py-2 px-4 rounded-full"
                   >
-                    Send message
+                    Send
                   </button>
                 </div>
               </form>

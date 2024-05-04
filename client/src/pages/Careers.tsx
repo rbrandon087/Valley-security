@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { createClient } from "@supabase/supabase-js";
 import { Resolver, SubmitHandler, useForm } from "react-hook-form";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
+
+const supabase = createClient(
+  "https://gyqokfxydvyydsntgdkz.supabase.co/",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5cW9rZnh5ZHZ5eWRzbnRnZGt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ4NTQ2OTIsImV4cCI6MjAzMDQzMDY5Mn0.2r2DgF9TgvRi1jE_WwI5bhAwzjC5qJFHU7xsW5hDuiQ",
+);
+
+const tableName = "Careers_Form";
 
 export interface ICareersProps {
   name: string;
@@ -118,6 +126,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
           onSubmit={handleSubmit(onSubmit)}
           action="/api/careers"
           method="POST"
+          encType="multipart/form-data"
           className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
         >
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">

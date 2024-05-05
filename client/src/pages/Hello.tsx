@@ -7,13 +7,14 @@ import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
 
 const supabase = createClient(
-  "https://gyqokfxydvyydsntgdkz.supabase.co/",
+  "https://gyqokfxydvyydsntgdkz.supabase.co",
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5cW9rZnh5ZHZ5eWRzbnRnZGt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ4NTQ2OTIsImV4cCI6MjAzMDQzMDY5Mn0.2r2DgF9TgvRi1jE_WwI5bhAwzjC5qJFHU7xsW5hDuiQ",
 );
 
-export interface ICareersProps {
+export interface IHelloProps {
   name: string;
 }
+
 type FormFields = {
   firstName: string;
   lastName: string;
@@ -23,50 +24,50 @@ type FormFields = {
   resume: File;
 };
 
-const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
-  const [data, setData] = useState<any>(null);
+{
+  /* break off!*/
+}
+const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormFields>();
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.post("http://localhost:4000/api/careers");
-        setData(response.data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
+  const [submitting, setSubmitting] = useState(false);
 
   const onSubmit = async (data: any) => {
     try {
-      const response = await fetch("/api/careers", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-      if (response.ok) {
-        // Handle success
-        alert("Form submitted");
-      } else {
-        // Handle error
-        alert("Error submitting data");
+      setSubmitting(true);
+
+      // Perform validation
+      if (Object.keys(errors).length > 0) {
+        console.error("Form has validation errors:", errors);
+        alert("Please fix validation errors before submitting.");
+        return;
       }
+
+      const { data: careerData, error } = await supabase
+        .from("Careers_Form")
+        .insert([data]);
+
+      if (error) {
+        throw error;
+      }
+
+      alert("Form submitted successfully");
     } catch (error) {
       console.error("Error submitting form:", error);
+      alert("Error submitting form");
+    } finally {
+      setSubmitting(false);
     }
   };
-
+  {
+    /* Form Info  */
+  }
   return (
-    <div className="relative isolate bg-white mt-8 ">
+    <div className="relative isolate bg-grey mt-8 ">
       <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
@@ -122,7 +123,6 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          action="/api/careers"
           method="POST"
           className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
         >
@@ -298,4 +298,4 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   );
 };
 
-export default Careers;
+export default Hello;

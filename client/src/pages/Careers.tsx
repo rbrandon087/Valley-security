@@ -6,11 +6,6 @@ import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
 
-const supabase = createClient(
-  "https://gyqokfxydvyydsntgdkz.supabase.co/",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5cW9rZnh5ZHZ5eWRzbnRnZGt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ4NTQ2OTIsImV4cCI6MjAzMDQzMDY5Mn0.2r2DgF9TgvRi1jE_WwI5bhAwzjC5qJFHU7xsW5hDuiQ",
-);
-
 export interface ICareersProps {
   name: string;
 }

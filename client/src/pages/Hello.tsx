@@ -5,17 +5,31 @@ import { Resolver, SubmitHandler, useForm } from "react-hook-form";
 import { PhotoIcon, UserCircleIcon } from "@heroicons/react/24/solid";
 import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/outline";
 import { doc } from "prettier";
+//SUPABASE INFORMATION HERE!
+if (
+  !process.env.REACT_APP_SUPABASE_URL ||
+  !process.env.REACT_APP_SUPABASE_KEY
+) {
+  throw new Error(
+    "Supabase URL or API key is not defined in environment variables.",
+  );
+}
 
-const supabase = createClient(
-  "https://gyqokfxydvyydsntgdkz.supabase.co",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imd5cW9rZnh5ZHZ5eWRzbnRnZGt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTQ4NTQ2OTIsImV4cCI6MjAzMDQzMDY5Mn0.2r2DgF9TgvRi1jE_WwI5bhAwzjC5qJFHU7xsW5hDuiQ",
-);
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL;
+const supabaseKey = process.env.REACT_APP_SUPABASE_KEY;
+
+const supabase = createClient(supabaseUrl, supabaseKey);
 
 export interface IHelloProps {
   name: string;
 }
 
+//Form Type
+
 type FormFields = {
+  phone_number: any;
+  last_name: any;
+  first_name: any;
   firstName: string;
   lastName: string;
   message: string;
@@ -28,6 +42,7 @@ type FormFields = {
   /* break off!*/
 }
 const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
+  //Form handle to submit a request to Supabase
   const {
     register,
     handleSubmit,
@@ -36,10 +51,11 @@ const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
 
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = async (data: any) => {
+  const onSubmit = async (data: FormFields) => {
     try {
       setSubmitting(true);
 
+      console.log("Form data:", data);
       // Perform validation
       if (Object.keys(errors).length > 0) {
         console.error("Form has validation errors:", errors);
@@ -49,7 +65,17 @@ const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
 
       const { data: careerData, error } = await supabase
         .from("Careers_Form")
-        .insert([data]);
+        .insert([
+          {
+            first_name: data.first_name,
+            last_name: data.last_name,
+            message: data.message,
+            email: data.email,
+            phone_number: data.phone_number,
+            // Handle file upload separately
+            // resume: data.resume[0],
+          },
+        ]);
 
       if (error) {
         throw error;
@@ -57,6 +83,7 @@ const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
 
       alert("Form submitted successfully");
     } catch (error) {
+      console.error("Supabase error:", error);
       console.error("Error submitting form:", error);
       alert("Error submitting form");
     } finally {
@@ -141,7 +168,7 @@ const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
                       required: "First name is required",
                     })}
                     type="text"
-                    name="firstName"
+                    name="first_name"
                     id="first-name"
                     autoComplete="name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
@@ -166,7 +193,7 @@ const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
                       required: "Last name is required",
                     })}
                     type="text"
-                    name="lastName"
+                    name="last_name"
                     id="last-name"
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
@@ -220,7 +247,7 @@ const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
                       required: "Phone number is required",
                     })}
                     type="tel"
-                    name="phoneNumber"
+                    name="phone_number"
                     id="phone-number"
                     autoComplete="tel"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
@@ -248,7 +275,7 @@ const Hello: React.FunctionComponent<IHelloProps> = ({ name }) => {
                       <input
                         {...register("resume", { required: "Resume needed" })}
                         id="file-upload"
-                        name="resumeFile"
+                        name="resume"
                         type="file"
                         className="sr-only inset-0 w-full h-full opacity-0 cursor-pointer"
                       />

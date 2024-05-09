@@ -19,7 +19,7 @@ import cors from "cors";
 const app = express();
 
 //Middleware for handling data
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 const PORT = process.env.PORT || 4000;
@@ -39,9 +39,9 @@ app.post("/api/careers", async (request, response) => {
             .insert([{ 
                 first_name: firstName,
                 last_name: lastName,
-                email,
-                message,
-                resume,
+                email: email,
+                message: message,
+                resume: resume,
                 phone_number: phone_number
             }]);
 

@@ -10,11 +10,11 @@ export interface ICareersProps {
   name: string;
 }
 type FormFields = {
-  firstName: string;
-  lastName: string;
+  first_name: string;
+  last_name: string;
   message: string;
   email: string;
-  phoneNumber: string;
+  phone_number: string;
   resume: File;
 };
 
@@ -132,18 +132,18 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    {...register("firstName", {
+                    {...register("first_name", {
                       required: "First name is required",
                     })}
                     type="text"
-                    name="firstName"
+                    name="first_name"
                     id="first-name"
                     autoComplete="name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
-                  {errors.firstName && (
+                  {errors.first_name && (
                     <div className="text-red-500">
-                      {errors.firstName.message}
+                      {errors.first_name.message}
                     </div>
                   )}
                 </div>
@@ -157,18 +157,18 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    {...register("lastName", {
+                    {...register("last_name", {
                       required: "Last name is required",
                     })}
                     type="text"
-                    name="lastName"
+                    name="last_name"
                     id="last-name"
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
-                  {errors.lastName && (
+                  {errors.last_name && (
                     <div className="text-red-500">
-                      {errors.lastName.message}
+                      {errors.last_name.message}
                     </div>
                   )}
                 </div>
@@ -211,18 +211,18 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    {...register("phoneNumber", {
+                    {...register("phone_number", {
                       required: "Phone number is required",
                     })}
                     type="tel"
-                    name="phoneNumber"
+                    name="phone_number"
                     id="phone-number"
                     autoComplete="tel"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
-                  {errors.phoneNumber && (
+                  {errors.phone_number && (
                     <div className="text-red-500">
-                      {errors.phoneNumber.message}
+                      {errors.phone_number.message}
                     </div>
                   )}
                 </div>

@@ -10,8 +10,8 @@ export interface ICareersProps {
   name: string;
 }
 type FormFields = {
-  first_name: string;
-  last_name: string;
+  firstName: string;
+  lastName: string;
   message: string;
   email: string;
   phone_number: string;
@@ -132,7 +132,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    {...register("first_name", {
+                    {...register("firstName", {
                       required: "First name is required",
                     })}
                     type="text"
@@ -141,9 +141,9 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     autoComplete="name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
-                  {errors.first_name && (
+                  {errors.firstName && (
                     <div className="text-red-500">
-                      {errors.first_name.message}
+                      {errors.firstName.message}
                     </div>
                   )}
                 </div>
@@ -157,7 +157,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                 </label>
                 <div className="mt-2.5">
                   <input
-                    {...register("last_name", {
+                    {...register("lastName", {
                       required: "Last name is required",
                     })}
                     type="text"
@@ -166,9 +166,9 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
                   />
-                  {errors.last_name && (
+                  {errors.lastName && (
                     <div className="text-red-500">
-                      {errors.last_name.message}
+                      {errors.lastName.message}
                     </div>
                   )}
                 </div>

@@ -24,7 +24,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ name }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.post("http://localhost:4000/api/careers");
+        const response = await axios.post("http://localhost:4000/api/contact");
         setData(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);

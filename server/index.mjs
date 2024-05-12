@@ -57,6 +57,32 @@ app.post("/api/careers", async (request, response) => {
     }
 });
 
+app.post("/api/contact", async (request, response) => {
+    const { firstName, lastName, email, message } = request.body;
+
+    try {
+        // Insert data into Supabase table
+        const { data, error } = await supabase
+            .from("Contact_Form")
+            .insert([{ 
+                first_name: firstName,
+                last_name: lastName,
+                email: email,
+                message: message
+            }]);
+
+        if (error) {
+            throw error;
+        }
+
+        console.log('Data inserted into Supabase:', data);
+        response.status(200).send({ msg: "Data received and inserted into Supabase!" });
+    } catch (error) {
+        console.error('Error inserting data into Supabase:', error);
+        response.status(500).send({ error: "An error occurred while inserting data into Supabase." });
+    }
+});
+
 
 app.listen(PORT , () => {
     console.log(`listening on port ${PORT}`);

@@ -136,7 +136,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                       required: "First name is required",
                     })}
                     type="text"
-                    name="first_name"
+                    name="firstName"
                     id="first-name"
                     autoComplete="name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"
@@ -161,7 +161,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
                       required: "Last name is required",
                     })}
                     type="text"
-                    name="last_name"
+                    name="lastName"
                     id="last-name"
                     autoComplete="family-name"
                     className="block w-full rounded-md border-0 bg-white/5 px-3.5 py-2 text-black shadow-sm ring-1 ring-inset ring-black focus:ring-2 focus:ring-inset focus:ring-bar sm:text-sm sm:leading-6"

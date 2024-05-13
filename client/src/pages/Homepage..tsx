@@ -10,6 +10,7 @@ import {
   XMarkIcon,
 } from "@heroicons/react/24/outline";
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
+import Patrol from "../assets/security-patrol.jpg";
 
 export interface IHomepageProps {
   name: string;
@@ -85,7 +86,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
           {/* Decorative image and overlay */}
           <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
             <img
-              src="https://tailwindui.com/img/ecommerce-images/home-page-01-hero-full-width.jpg"
+              src={Patrol}
               alt=""
               className="h-full w-full object-cover object-center"
             />
@@ -102,16 +103,13 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
               New arrivals are here
             </h1>
             <p className="mt-4 text-xl text-white">
-              The new arrivals have, well, newly arrived. Check out the latest
-              options from our summer small-batch release while they're still in
-              stock.
+              At Valley Security, we're committed to protecting what matters
+              most. With our team of dedicated security professionals, we
+              provide tailored security solutions for your peace of mind. From
+              safeguarding premises to ensuring asset and personnel safety,
+              trust us to be your security partner. Discover the difference with
+              Valley Security today.
             </p>
-            <a
-              href="#"
-              className="mt-8 inline-block rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100"
-            >
-              Shop New Arrivals
-            </a>
           </div>
         </div>
 

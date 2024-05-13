@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useForm } from "react-hook-form";
-import Navbar from "../components/Navbar";
+
 export interface IContactProps {
   name: string;
   rows: number;
@@ -57,8 +57,7 @@ const Contact: React.FunctionComponent<IContactProps> = ({ name }) => {
   };
   return (
     <div>
-      <Navbar name={""} />
-      <div className="relative bg-white mt-24 ">
+      <div className="relative bg-gray-900 mt-0 ">
         <div className="pb-24 pt-16 sm:pb-32 sm:pt-24 lg:mx-auto lg:grid lg:max-w-7xl lg:grid-cols-2 lg:pt-32 ">
           <div className="px-6 lg:px-8 ">
             <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg ">

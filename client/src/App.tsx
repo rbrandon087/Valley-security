@@ -21,7 +21,6 @@ const App: React.FC = () => {
 
   return (
     <Router>
-      <Navbar name={""} />
       <Routes>
         <Route path="/" element={<Navigate to="/Homepage" replace />} />
         <Route

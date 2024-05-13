@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 
 export interface IAboutProps {
   name: string;
@@ -60,7 +59,6 @@ const people = [
 const About: React.FunctionComponent<IAboutProps> = ({}) => {
   return (
     <div>
-      <Navbar name={""} />
       <div className="bg-white py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">

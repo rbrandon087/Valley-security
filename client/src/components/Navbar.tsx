@@ -17,7 +17,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
 
   return (
     <div>
-      <nav className="bg-white p-1  overflow-hidden fixed w-full bg-opacity-50 top-0 z-50  ">
+      <nav className="bg- p-1  overflow-hidden fixed w-full bg-opacity-50 top-0 z-50  ">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8" />
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -79,39 +79,38 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
                   </a>
                 </div>
               </div>
-              {/* Call Button*/}
 
               <div className="flex space-x-4 ">
                 {/* Links */}
-                <div className="flex lg:flex-1  items-left">
+                <div className="flex lg:flex-1 ">
                   <a
                     href="/Homepage"
-                    className="p-2 px-4 group font-medium text-sm"
+                    className="p-2 px-4 group font-medium text-sm text-white"
                     aria-current="page"
                   >
-                    Home
-                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
+                    HOME
+                    <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500 "></div>
                   </a>
 
                   <a
                     href="/About"
-                    className="p-2 px-4 group font-medium text-sm"
+                    className="p-2 px-4 group font-medium text-sm text-white"
                   >
-                    About
+                    ABOUT
                     <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                   <a
                     href="/Contact"
-                    className="p-2 px-4 group font-medium text-sm"
+                    className="p-2 px-4 group font-medium text-sm text-white"
                   >
-                    Contact
+                    CONTACT
                     <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                   <a
                     href="/Careers"
-                    className="p-2 px-4 group font-medium text-sm"
+                    className="p-2 px-4 group font-medium text-sm text-white"
                   >
-                    Careers
+                    CAREERS
                     <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
                   </a>
                 </div>
@@ -128,28 +127,33 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
               href="/Homepage"
-              className="p-2 px-4 group font-medium text-sm"
+              className="p-2 px-4 group font-medium text-sm text-white"
               aria-current="page"
               onClick={toggleMenu}
             >
-              Home
+              HOME
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
 
-            <a href="/Gallery" className="p-2 px-4 group font-medium text-sm">
-              Gallery
+            <a
+              href="/About"
+              className="p-2 px-4 group font-medium text-sm text-white"
+            >
+              ABOUT
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
-            <a href="/About" className="p-2 px-4 group font-medium text-sm">
-              About
+            <a
+              href="/Contact"
+              className="p-2 px-4 group font-medium text-sm text-white"
+            >
+              CONTACT
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
-            <a href="/Contact" className="p-2 px-4 group font-medium text-sm">
-              Contact
-              <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
-            </a>
-            <a href="/Careers" className="p-2 px-4 group font-medium text-sm">
-              Careers
+            <a
+              href="/Careers"
+              className="p-2 px-4 group font-medium text-sm text-white"
+            >
+              CAREERS
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
           </div>

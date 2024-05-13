@@ -434,6 +434,15 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
             </div>
           </section>
         </main>
+        <div className="relative">
+          <div
+            className="absolute inset-0 flex items-center"
+            aria-hidden="true"
+          >
+            <div className="w-full border-t border-red-900" />
+          </div>
+          <div className="relative flex justify-center"></div>
+        </div>
         {/* Footer section */}
         <footer aria-labelledby="footer-heading" className="bg-gray-900">
           <h2 id="footer-heading" className="sr-only">

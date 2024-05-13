@@ -115,58 +115,175 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
 
         <main>
           {/* Category section */}
-          <div className="mx-auto max-w-7xl px-6 lg:px-8 mt-8 ">
-            <div className="mx-auto max-w-2xl text-center">
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                From the blog
-              </h2>
-              <p className="mt-2 text-lg leading-8 text-gray-600">
-                Learn how to grow your business with our expert advice.
-              </p>
-            </div>
-            <div className="mx-auto mt-16 grid max-w-2xl auto-rows-fr grid-cols-1 gap-8 sm:mt-20 lg:mx-0 lg:max-w-none lg:grid-cols-3">
-              {posts.map((post) => (
-                <article
-                  key={post.id}
-                  className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl bg-gray-900 px-8 pb-8 pt-80 sm:pt-48 lg:pt-80"
-                >
-                  <img
-                    src={post.imageUrl}
-                    alt=""
-                    className="absolute inset-0 -z-10 h-full w-full object-cover"
-                  />
-                  <div className="absolute inset-0 -z-10 bg-gradient-to-t from-gray-900 via-gray-900/40" />
-                  <div className="absolute inset-0 -z-10 rounded-2xl ring-1 ring-inset ring-gray-900/10" />
+          <div className="bg-gray-900 py-24 sm:py-32">
+            <div className="mx-auto max-w-7xl px-6 lg:px-8">
+              <div className="mx-auto max-w-2xl lg:mx-0">
+                <h2 className="text-3xl font-bold tracking-tight text-white">
+                  OUR SERVICES
+                </h2>
+              </div>
+              <div className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-8 text-base leading-7 sm:grid-cols-2 sm:gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-4">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6 text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M13.5 10.5V6.75a4.5 4.5 0 1 1 9 0v3.75M3.75 21.75h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H3.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
+                    />
+                  </svg>
 
-                  <div className="flex flex-wrap items-center gap-y-1 overflow-hidden text-sm leading-6 text-gray-300">
-                    <time dateTime={post.datetime} className="mr-8">
-                      {post.date}
-                    </time>
-                    <div className="-ml-4 flex items-center gap-x-4">
-                      <svg
-                        viewBox="0 0 2 2"
-                        className="-ml-0.5 h-0.5 w-0.5 flex-none fill-white/50"
-                      >
-                        <circle cx={1} cy={1} r={1} />
-                      </svg>
-                      <div className="flex gap-x-2.5">
-                        <img
-                          src={post.author.imageUrl}
-                          alt=""
-                          className="h-6 w-6 flex-none rounded-full bg-white/10"
-                        />
-                        {post.author.name}
-                      </div>
-                    </div>
-                  </div>
-                  <h3 className="mt-3 text-lg font-semibold leading-6 text-white">
-                    <a href={post.href}>
-                      <span className="absolute inset-0" />
-                      {post.title}
-                    </a>
+                  <h3 className=" pl-6 font-semibold text-white">
+                    ARMED AND UNARMED UNIFORMED OFFICERS
                   </h3>
-                </article>
-              ))}
+                </div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6  text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
+                    />
+                  </svg>
+
+                  <h3 className=" pl-6 font-semibold text-white">
+                    ACCESS CONTROL
+                  </h3>
+                </div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6  text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"
+                    />
+                  </svg>
+
+                  <h3 className=" pl-6 font-semibold text-white">
+                    SECURITY CONSOLE OPERATORS
+                  </h3>
+                </div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6  text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
+                    />
+                  </svg>
+
+                  <h3 className=" pl-6 font-semibold text-white">
+                    THREAT ASSESSMENT
+                  </h3>
+                </div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6  text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"
+                    />
+                  </svg>
+
+                  <h3 className=" pl-6 font-semibold text-white">
+                    VEHICLE PATROL
+                  </h3>
+                </div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6  text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
+                    />
+                  </svg>
+
+                  <h3 className=" pl-6 font-semibold text-white">
+                    BICYCLE AND FOOT PATROL
+                  </h3>
+                </div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6  text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
+                    />
+                  </svg>
+
+                  <h3 className=" pl-6 font-semibold text-white">
+                    SPECIALIZED CLIENT REQUESTS
+                  </h3>
+                </div>
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth={1.5}
+                    stroke="currentColor"
+                    className="w-6 h-6  text-red-500"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.75 5.25a3 3 0 0 1 3 3m3 0a6 6 0 0 1-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1 1 21.75 8.25Z"
+                    />
+                  </svg>
+
+                  <h3 className="  pl-6 font-semibold text-white">
+                    LOSS PREVENTION
+                  </h3>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -255,10 +372,9 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                     <div className="mt-10 flex">
                       <a
                         href="#"
-                        className="text-sm font-semibold leading-6 text-indigo-400"
+                        className="mt-8 block w-full rounded-md border border-transparent bg-white px-8 py-3 text-base font-medium text-gray-900 hover:bg-gray-100 sm:w-auto"
                       >
-                        See our job postings{" "}
-                        <span aria-hidden="true">&rarr;</span>
+                        APPLY NOW
                       </a>
                     </div>
                   </div>

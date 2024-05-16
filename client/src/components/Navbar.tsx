@@ -113,10 +113,10 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
           className={`fixed inset-0 flex items-center justify-center z-50 bg-gray-900 ${isMenuOpen ? "block" : "hidden"}`}
           id="mobile-menu"
         >
-          <div className="space-y-1 px-2 pb-3 pt-2">
+          <div className="space-y-2 px-2 pb-3 pt-2">
             <a
               href="/Homepage"
-              className="p-4 px-4 group font-medium text-3xl text-white"
+              className="block p-2 px-6 group font-medium text-3xl text-white"
               aria-current="page"
               onClick={toggleMenu}
             >
@@ -125,21 +125,21 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
             </a>
             <a
               href="/About"
-              className="p-4 px-4 group font-medium text-3xl text-white"
+              className="block p-2 px-4 group font-medium text-3xl text-white"
             >
               ABOUT
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
             <a
               href="/Contact"
-              className="p-4 px-4 group font-medium text-3xl text-white"
+              className="block p-2 px-4 group font-medium text-3xl text-white"
             >
               CONTACT
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
             <a
               href="/Careers"
-              className="p-4 px-4 group font-medium text-3xl text-white"
+              className="block p-2 px-4 group font-medium text-3xl text-white"
             >
               CAREERS
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>

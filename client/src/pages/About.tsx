@@ -1,4 +1,6 @@
 import React from "react";
+import Patrol from "../assets/security-patrol.jpg";
+import "../styles/About.css";
 
 export interface IAboutProps {
   name: string;
@@ -6,88 +8,88 @@ export interface IAboutProps {
 
 const people = [
   {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
+    name: "Nick",
+    role: "CEO",
+    imageUrl: { Patrol },
     xUrl: "#",
     linkedinUrl: "#",
   },
   {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
+    name: "Patty",
+    role: "Guard Supervisor",
     imageUrl:
       "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
     xUrl: "#",
     linkedinUrl: "#",
   },
-  {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    xUrl: "#",
-    linkedinUrl: "#",
-  },
-  {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    xUrl: "#",
-    linkedinUrl: "#",
-  },
-  {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    xUrl: "#",
-    linkedinUrl: "#",
-  },
-  {
-    name: "Lindsay Walton",
-    role: "Front-end Developer",
-    imageUrl:
-      "https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=8&w=1024&h=1024&q=80",
-    xUrl: "#",
-    linkedinUrl: "#",
-  },
+
   // More people...
 ];
 
 const About: React.FunctionComponent<IAboutProps> = ({}) => {
   return (
     <div>
+      <div className="relative bg-gray-900">
+        {/* Decorative image and overlay */}
+        <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
+          <img
+            src={Patrol}
+            alt=""
+            className="h-full w-full object-cover object-center"
+          />
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gray-900 opacity-50"
+        />
+
+        {/* Page opener */}
+
+        <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
+          <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl flex-end"></h1>
+          <p className="mt-4 text-xl text-white"></p>
+        </div>
+      </div>
+
+      {/* About content */}
+
       <div className="bg-gray-900 py-24 sm:py-32">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="mx-auto max-w-2xl lg:mx-0">
-            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Meet The Team
+            <h2 className="text-3xl font-bold tracking-tight text-red-900 sm:text-4xl ">
+              OUR TEAM PHILOSOPHY
             </h2>
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              We’re a dynamic group of individuals who are passionate about what
-              we do and dedicated to delivering the best results for our
-              clients.
+            <p className="mt-6 text-lg leading-8 text-white">
+              We focus on employee retention, ensuring that Valley Security can
+              provide clients with the best security officers available. We’re
+              not a “revolving door,” hiring and firing employees just to keep a
+              post staffed. We encourage long-term relationships between our
+              officers and our clients.
+            </p>
+            <p className="mt-6 text-lg leading-8 text-white opacity-25">
+              In short, we’re a people-focused security firm.
             </p>
           </div>
+
           <ul
             role="list"
             className="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3"
           >
-            {people.map((person) => (
+            {people.slice(0, 2).map((person) => (
               <li key={person.name}>
                 <img
                   className="aspect-[3/2] w-full rounded-2xl object-cover"
-                  src={person.imageUrl}
+                  src={
+                    typeof person.imageUrl === "string"
+                      ? person.imageUrl
+                      : person.imageUrl.Patrol
+                  }
                   alt=""
                 />
-                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-gray-900">
+                <h3 className="mt-6 text-lg font-semibold leading-8 tracking-tight text-white">
                   {person.name}
                 </h3>
-                <p className="text-base leading-7 text-gray-600">
-                  {person.role}
-                </p>
+                <p className="text-base leading-7 text-white">{person.role}</p>
                 <ul role="list" className="mt-6 flex gap-x-6">
                   <li>
                     <a

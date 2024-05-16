@@ -39,6 +39,12 @@ const navigation = {
 const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
   return (
     <div className="min-h-0.5">
+      <div className="relative">
+        <div className="absolute inset-0 flex items-center" aria-hidden="true">
+          <div className="w-full border-t border-red-900" />
+        </div>
+        <div className="relative flex justify-center"></div>
+      </div>
       <footer className="bg-gray-900 px-2 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8 ">
           <div className=" space-x-6 md:order-2 md:mt-0 w-full flex items-center justify-center">

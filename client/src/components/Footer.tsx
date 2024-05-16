@@ -30,7 +30,7 @@ const navigation = {
     },
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/in/brannzavaleta11/",
+      href: "https://www.thepopcornfactory.com/",
       icon: FaLinkedinIn,
     },
   ],

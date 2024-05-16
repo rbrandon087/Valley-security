@@ -61,8 +61,8 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   };
 
   return (
-    <div className="relative isolate bg-gray-900 mt-0  justify-center">
-      <div className="mx-auto grid max-w-7xl grid-cols-1 lg:grid-cols-2">
+    <div className="relative bg-gray-900 mt-0 flex justify-center items-center h-screen">
+      <div className="">
         <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48">
           <div className="mx-auto max-w-xl lg:mx-0 lg:max-w-lg">
             <h2 className="text-3xl font-bold tracking-tight text-black"></h2>
@@ -119,7 +119,7 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
           onSubmit={handleSubmit(onSubmit)}
           action="/api/careers"
           method="POST"
-          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48"
+          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48 -mt-72"
         >
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

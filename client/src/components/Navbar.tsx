@@ -105,8 +105,12 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
             <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0"></div>
           </div>
         </div>
+        {/* Mobile Links */}
         <div
-          className={`sm:hidden ${isMenuOpen ? "block" : "hidden"}`}
+          className={`fixed inset-0 bg-gray-900 z-50 transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+        ></div>
+        <div
+          className={`fixed inset-0 flex items-center justify-center z-50 bg-gray-900 ${isMenuOpen ? "block" : "hidden"}`}
           id="mobile-menu"
         >
           <div className="space-y-1 px-2 pb-3 pt-2">

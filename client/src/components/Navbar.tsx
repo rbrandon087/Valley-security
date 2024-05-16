@@ -116,30 +116,30 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
           <div className="space-y-1 px-2 pb-3 pt-2">
             <a
               href="/Homepage"
-              className="p-4 px-4 group font-medium text-lg text-white"
+              className="p-4 px-4 group font-medium text-3xl text-white"
               aria-current="page"
               onClick={toggleMenu}
             >
               HOME
-              <div className="bg-bar h-[2px] w-0   group-hover:w-full transition-all duration-500"></div>
+              <div className="bg-bar h-[2px] w-0  group-hover:w-full transition-all duration-500"></div>
             </a>
             <a
               href="/About"
-              className="p-4 px-4 group font-medium text-lg text-white"
+              className="p-4 px-4 group font-medium text-3xl text-white"
             >
               ABOUT
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
             <a
               href="/Contact"
-              className="p-4 px-4 group font-medium text-lg text-white"
+              className="p-4 px-4 group font-medium text-3xl text-white"
             >
               CONTACT
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
             <a
               href="/Careers"
-              className="p-4 px-4 group font-medium text-lg text-white"
+              className="p-4 px-4 group font-medium text-3xl text-white"
             >
               CAREERS
               <div className="bg-bar h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>

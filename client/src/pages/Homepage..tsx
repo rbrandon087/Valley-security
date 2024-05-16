@@ -524,12 +524,6 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                 </form>
               </div>
             </div>
-
-            <div className="border-t border-gray-800 py-10">
-              <p className="text-sm text-gray-400">
-                Copyright &copy; 2021 Your Company, Inc.
-              </p>
-            </div>
           </div>
         </footer>
       </div>

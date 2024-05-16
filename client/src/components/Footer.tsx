@@ -15,22 +15,22 @@ const navigation = {
   social: [
     {
       name: "TikTok",
-      href: "https://www.tiktok.com/@silverstateflooring?_t=8kvTEHKKDpS&_r=1",
+      href: "https://msuspartans.com/sports/mens-basketball",
       icon: FaTiktok,
     },
     {
       name: "Facebook",
-      href: "https://www.facebook.com/silverstateflooring?mibextid=ZbWKwL",
+      href: "https://www.steelers.com/",
       icon: FaFacebook,
     },
     {
       name: "Instagram",
-      href: "https://www.instagram.com/silverstateflooring?igsh=czR5cWZpMjBzdW5x",
+      href: "https://www.detroitlions.com/",
       icon: FaInstagram,
     },
     {
       name: "LinkedIn",
-      href: "https://www.linkedin.com/company/silver-state-flooring-llc/about/",
+      href: "https://www.linkedin.com/in/brannzavaleta11/",
       icon: FaLinkedinIn,
     },
   ],
@@ -39,9 +39,9 @@ const navigation = {
 const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
   return (
     <div className="min-h-0.5">
-      <footer className="bg-bar px-2 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 px-2 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl px-6 py-12 md:flex md:items-center md:justify-between lg:px-8 ">
-          <div className="flex justify-center space-x-6 md:order-2 ">
+          <div className=" space-x-6 md:order-2 md:mt-0 w-full flex items-center justify-center">
             {navigation.social.map((item) => (
               <a
                 key={item.name}
@@ -53,7 +53,7 @@ const Footer: React.FunctionComponent<IFooterProps> = ({ name }) => {
               </a>
             ))}
           </div>
-          <div className="mt-8 md:order-1 md:mt-0">
+          <div className="mt-8 md:order-1 md:mt-0 flex items-center justify-center">
             <p className="text-center text-xs leading-5 text-gray-200">
               &copy; Brandon Zavaleta
             </p>

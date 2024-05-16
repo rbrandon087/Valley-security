@@ -107,7 +107,7 @@ const Navbar: React.FC<INavbarProps> = ({ name }) => {
         </div>
         {/* Mobile Links */}
         <div
-          className={`fixed inset-0 bg-gray-900 z-50 transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
+          className={`fixed inset-0 bg-white z-50 transition-opacity ${isMenuOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}
         ></div>
         <div
           className={`fixed inset-0 flex items-center justify-center z-50 bg-gray-900 ${isMenuOpen ? "block" : "hidden"}`}

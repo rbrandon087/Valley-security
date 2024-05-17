@@ -62,14 +62,13 @@ const Careers: React.FunctionComponent<ICareersProps> = ({ name }) => {
   return (
     <div className="relative bg-gray-900 mt-0 flex justify-center items-center h-screen">
       <div className="">
-        <div className="relative px-6 pb-20 pt-24 sm:pt-32 lg:static lg:px-8 lg:py-48"></div>
         {/* Form submit */}
 
         <form
           onSubmit={handleSubmit(onSubmit)}
           action="/api/careers"
           method="POST"
-          className="px-6 pb-24 pt-20 sm:pb-32 lg:px-8 lg:py-48 -mt-72"
+          className="mt-16"
         >
           <div className="mx-auto max-w-xl lg:mr-0 lg:max-w-lg">
             <div className="grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

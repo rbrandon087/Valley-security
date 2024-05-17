@@ -82,7 +82,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
   return (
     <div>
       <div className="bg-gray-900">
-        <div className="relative bg-gray-900">
+        <div className="relative bg-gray-900 h-screen">
           {/* Decorative image and overlay */}
           <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
             <img
@@ -100,7 +100,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
 
           <div className="relative mx-auto flex max-w-3xl flex-col items-center px-6 py-32 text-center sm:py-64 lg:px-0">
             <h1 className="text-4xl font-bold tracking-tight text-white lg:text-6xl">
-              New arrivals are here
+              Valley Security
             </h1>
             <p className="mt-4 text-xl text-white">
               At Valley Security, we're committed to protecting what matters
@@ -290,30 +290,7 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
           <div className="mt-6 px-4 sm:hidden"></div>
 
           {/* Featured section */}
-          <section
-            aria-labelledby="social-impact-heading"
-            className="mx-auto max-w-7xl px-4 pt-24 sm:px-6 sm:pt-32 lg:px-8"
-          >
-            <div className="relative overflow-hidden rounded-lg">
-              <div className="absolute inset-0">
-                <img
-                  src="https://tailwindui.com/img/ecommerce-images/home-page-01-feature-section-01.jpg"
-                  alt=""
-                  className="h-auto md:h-72 w-full object-cover max-h-40" // Set max height to keep it thin
-                />
-              </div>
-              <div className="relative bg-gray-900 bg-opacity-75 px-6 py-32 sm:px-12 sm:py-40 lg:px-16">
-                <div className="relative mx-auto flex max-w-3xl flex-col items-center text-center">
-                  <p className="mt-0 text-xl text-white">
-                    Make your desk beautiful and organized. Post a picture to
-                    social media and watch it get more likes than life-changing
-                    announcements. Reflect on the shallow nature of existence.
-                    At least you have a really nice desk setup.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
+
           {/* WHAT THE WEBSITE OFFERS IN SERVICES */}
           <section
             aria-labelledby="comfort-heading"
@@ -425,9 +402,9 @@ const Homepage: React.FunctionComponent<IHomepageProps> = ({ name }) => {
                       Join our team
                     </h2>
                     <p className="mt-6 text-lg leading-8 text-gray-300">
-                      Lorem ipsum dolor sit amet consect adipisicing elit.
-                      Possimus magnam voluptatum cupiditate veritatis in
-                      accusamus quisquam.
+                      Are you passionate about Security? Do you thrive in a
+                      dynamic, innovative environment? If so, we want to hear
+                      from you!
                     </p>
                     <ul
                       role="list"

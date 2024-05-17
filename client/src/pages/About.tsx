@@ -29,7 +29,7 @@ const people = [
 const About: React.FunctionComponent<IAboutProps> = ({}) => {
   return (
     <div>
-      <div className="relative bg-gray-900">
+      <div className="relative bg-gray-900 h-screen">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <img

@@ -1,5 +1,6 @@
 import React from "react";
-import Patrol from "../assets/security-patrol.jpg";
+import Patrol from "../assets/security-gaurd-3.jpg";
+import Guard from "../assets/security-patrol.jpg";
 import "../styles/About.css";
 
 export interface IAboutProps {
@@ -10,7 +11,7 @@ const people = [
   {
     name: "Nick",
     role: "CEO",
-    imageUrl: { Patrol },
+    imageUrl: { Guard },
     xUrl: "#",
     linkedinUrl: "#",
   },
@@ -29,7 +30,7 @@ const people = [
 const About: React.FunctionComponent<IAboutProps> = ({}) => {
   return (
     <div>
-      <div className="relative bg-gray-900 h-screen">
+      <div className="relative bg-gray-900 ">
         {/* Decorative image and overlay */}
         <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
           <img
@@ -82,7 +83,7 @@ const About: React.FunctionComponent<IAboutProps> = ({}) => {
                   src={
                     typeof person.imageUrl === "string"
                       ? person.imageUrl
-                      : person.imageUrl.Patrol
+                      : person.imageUrl.Guard
                   }
                   alt=""
                 />
